@@ -22,7 +22,7 @@ const applyProfessionalToolsWording = () => {
   while (current) {
     const original = current.nodeValue ?? ''
     const updated = replacements.reduce(
-      (text, [search, replacement]) => text.replaceAll(search, replacement),
+      (text, [search, replacement]) => text.split(search).join(replacement),
       original,
     )
 
