@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
 import { content, type Language } from './content'
 import './styles.css'
+import './notice-modal.css'
 
 const publicCvUrl = 'https://drive.google.com/file/d/1rStT-1HBNTMGJUThcpHNDIZ3ehnzglIF/view'
 
 function App() {
   const [language, setLanguage] = useState<Language>('en')
   const [darkMode, setDarkMode] = useState(false)
+  const [noticeOpen, setNoticeOpen] = useState(false)
   const copy = content[language]
 
   const page = language === 'en'
@@ -19,7 +21,7 @@ function App() {
           projects: 'PROJECTS',
           about: 'ABOUT',
           process: 'PROCESS',
-          links: 'LINKS',
+          cv: 'PUBLIC CV',
         },
         languageCode: 'EL',
         languageLabel: 'Ελληνικά',
@@ -55,12 +57,8 @@ function App() {
         noticeTitle: 'Important note',
         noticeText:
           'This is a personal project portfolio. It is not an official website of any public authority, does not represent an employer and does not offer commercial or official services.',
-        linksEyebrow: 'RELATED LINKS',
-        linksTitle: 'Continue exploring',
-        ecosystem: 'Markellos Ecosystem',
-        ecosystemText: 'The main personal ecosystem, writing and other interests.',
+        closeNotice: 'Close',
         cv: 'Public CV',
-        cvText: 'A public bilingual version of my curriculum vitae.',
         footerText:
           'A personal portfolio of selected projects and applications, presented with privacy and confidentiality in mind.',
         copyright: 'All rights reserved.',
@@ -74,7 +72,7 @@ function App() {
           projects: 'ΕΡΓΑ',
           about: 'ΣΧΕΤΙΚΑ',
           process: 'ΔΙΑΔΙΚΑΣΙΑ',
-          links: 'ΣΥΝΔΕΣΜΟΙ',
+          cv: 'ΔΗΜΟΣΙΟ CV',
         },
         languageCode: 'EN',
         languageLabel: 'English',
@@ -110,12 +108,8 @@ function App() {
         noticeTitle: 'Σημαντική σημείωση',
         noticeText:
           'Πρόκειται για προσωπικό portfolio έργων. Δεν είναι επίσημη ιστοσελίδα δημόσιας αρχής, δεν εκπροσωπεί εργοδότη και δεν παρέχει εμπορικές ή επίσημες υπηρεσίες.',
-        linksEyebrow: 'ΣΧΕΤΙΚΟΙ ΣΥΝΔΕΣΜΟΙ',
-        linksTitle: 'Περισσότερα',
-        ecosystem: 'Markellos Ecosystem',
-        ecosystemText: 'Το κύριο προσωπικό οικοσύστημα, κείμενα και άλλα ενδιαφέροντα.',
+        closeNotice: 'Κλείσιμο',
         cv: 'Δημόσιο CV',
-        cvText: 'Η δημόσια δίγλωσση έκδοση του βιογραφικού μου.',
         footerText:
           'Προσωπικό portfolio επιλεγμένων έργων και εφαρμογών, με σεβασμό στην ιδιωτικότητα και την εμπιστευτικότητα.',
         copyright: 'Με επιφύλαξη παντός δικαιώματος.',
@@ -128,6 +122,23 @@ function App() {
       ? 'Markellos Projects'
       : 'Markellos Projects — Έργα και εφαρμογές'
   }, [language, darkMode])
+
+  useEffect(() => {
+    if (!noticeOpen) return
+
+    const previousOverflow = document.body.style.overflow
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setNoticeOpen(false)
+    }
+
+    document.body.style.overflow = 'hidden'
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [noticeOpen])
 
   const toggleLanguage = () => {
     setLanguage((current) => (current === 'en' ? 'el' : 'en'))
@@ -152,7 +163,7 @@ function App() {
             <a href="#projects">{page.nav.projects}</a>
             <a href="#about">{page.nav.about}</a>
             <a href="#process">{page.nav.process}</a>
-            <a href="#links">{page.nav.links}</a>
+            <a href={publicCvUrl} target="_blank" rel="noreferrer">{page.nav.cv}</a>
           </nav>
 
           <div className="header-actions">
@@ -266,28 +277,6 @@ function App() {
             ))}
           </div>
         </section>
-
-        <section className="container content-card notice-card">
-          <h2>{page.noticeTitle}</h2>
-          <p>{page.noticeText}</p>
-        </section>
-
-        <section className="container content-card" id="links">
-          <div className="section-heading">
-            <p className="eyebrow">{page.linksEyebrow}</p>
-            <h2>{page.linksTitle}</h2>
-          </div>
-          <div className="links-grid">
-            <a className="link-card" href="https://markellosecosystem.com/" target="_blank" rel="noreferrer">
-              <strong>{page.ecosystem}</strong>
-              <span>{page.ecosystemText}</span>
-            </a>
-            <a className="link-card" href={publicCvUrl} target="_blank" rel="noreferrer">
-              <strong>{page.cv}</strong>
-              <span>{page.cvText}</span>
-            </a>
-          </div>
-        </section>
       </main>
 
       <footer className="site-footer">
@@ -305,7 +294,6 @@ function App() {
             <a href="#projects">{page.nav.projects}</a>
             <a href="#about">{page.nav.about}</a>
             <a href="#process">{page.nav.process}</a>
-            <a href="#links">{page.nav.links}</a>
           </nav>
 
           <div className="footer-actions">
@@ -313,6 +301,10 @@ function App() {
             <a href={publicCvUrl} target="_blank" rel="noreferrer" aria-label={page.cv}>CV</a>
             <a href="mailto:markellos.markides@gmail.com" aria-label="Email">@</a>
           </div>
+
+          <button className="footer-notice-button" type="button" onClick={() => setNoticeOpen(true)}>
+            {page.noticeTitle}
+          </button>
         </div>
 
         <div className="container footer-bottom">
@@ -320,6 +312,32 @@ function App() {
           <span>markellosecosystem.com</span>
         </div>
       </footer>
+
+      {noticeOpen && (
+        <div className="notice-overlay" role="presentation" onMouseDown={() => setNoticeOpen(false)}>
+          <section
+            className="notice-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="notice-title"
+            onMouseDown={(event) => event.stopPropagation()}
+          >
+            <div className="notice-dialog-header">
+              <h2 id="notice-title">{page.noticeTitle}</h2>
+              <button
+                className="notice-close"
+                type="button"
+                aria-label={page.closeNotice}
+                title={page.closeNotice}
+                onClick={() => setNoticeOpen(false)}
+              >
+                ×
+              </button>
+            </div>
+            <p>{page.noticeText}</p>
+          </section>
+        </div>
+      )}
     </>
   )
 }
