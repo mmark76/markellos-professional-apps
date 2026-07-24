@@ -3,7 +3,7 @@
 .content-card .hero-note,
 .content-card .about-copy {
   width: 100%;
-  max-width: none;
+  max-width: none !important;
 }
 
 .content-card .section-heading > p,
@@ -12,5 +12,21 @@
 .process-card p,
 .fact-card span {
   width: 100%;
-  max-width: none;
+  max-width: none !important;
+}
+
+.hero-card .hero-lead,
+.hero-card .hero-note {
+  width: 100%;
+  max-width: 100% !important;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+}
+
+@media (max-width: 700px) {
+  .hero-card .hero-lead,
+  .hero-card .hero-note {
+    text-align: left;
+  }
 }
