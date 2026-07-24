@@ -1,5 +1,5 @@
 :root {
-  --footer-height: 92px;
+  --footer-height: 78px;
 }
 
 .site-footer {
@@ -18,25 +18,19 @@
 }
 
 .site-footer::after {
-  position: absolute;
-  right: 16px;
-  bottom: 4px;
-  color: #8d867a;
-  content: "version_20260724_projects";
-  font-size: 0.66rem;
-  letter-spacing: 0.01em;
+  content: none;
 }
 
 .footer-bottom {
   order: 1;
   display: flex;
-  min-height: 37px;
+  min-height: 31px;
   align-items: center;
   justify-content: center;
   border: 0;
   color: #4a4338;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.96rem;
+  font-size: 0.72rem;
   text-align: center;
 }
 
@@ -47,82 +41,118 @@
 .footer-top {
   order: 2;
   display: flex;
-  min-height: 55px;
+  min-height: 47px;
   align-items: flex-start;
   justify-content: center;
-  padding: 4px 0 20px;
+  gap: 0;
+  padding: 3px 0 17px;
 }
 
-.footer-brand,
-.footer-actions {
+.footer-brand {
   display: none;
 }
 
-.footer-links {
+.footer-links,
+.footer-actions {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-actions a:first-child {
   position: relative;
   display: inline-block;
-  padding: 0 11px;
+  width: auto;
+  height: auto;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 0;
   color: #3f4b35;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.9rem;
+  font-size: 0.69rem;
   font-weight: 400;
   letter-spacing: 0;
+  line-height: 1.2;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 
-.footer-links a + a::before {
-  position: absolute;
-  top: 12%;
-  bottom: 12%;
-  left: 0;
-  width: 1px;
-  background: #b78d50;
-  content: "";
+.footer-links a + a::before,
+.footer-actions::before {
+  color: #b78d50;
+  content: "|";
+  font-size: 0.63rem;
+  text-decoration: none;
+}
+
+.footer-actions a:first-child {
+  font-size: 0;
+}
+
+.footer-actions a:first-child::after {
+  content: "Markellos Ecosystem";
+  font-size: 0.69rem;
+}
+
+.footer-actions a:not(:first-child) {
+  display: none;
 }
 
 .footer-links a:hover,
-.footer-links a:focus-visible {
+.footer-links a:focus-visible,
+.footer-actions a:first-child:hover,
+.footer-actions a:first-child:focus-visible {
   color: #856328;
+}
+
+.build-version {
+  position: fixed;
+  right: 14px;
+  bottom: 3px;
+  z-index: 1150;
+  color: #8d867a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.01em;
+  pointer-events: none;
 }
 
 @media (max-width: 700px) {
   :root {
-    --footer-height: 108px;
+    --footer-height: 94px;
   }
 
   .footer-bottom {
-    min-height: 38px;
-    padding: 0 12px;
-    font-size: 0.8rem;
+    min-height: 32px;
+    padding: 0 10px;
+    font-size: 0.65rem;
   }
 
   .footer-top {
-    min-height: 70px;
-    padding: 2px 12px 24px;
+    min-height: 62px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 2px 8px 20px;
   }
 
   .footer-links {
     flex-wrap: wrap;
-    row-gap: 6px;
+    row-gap: 4px;
   }
 
-  .footer-links a {
-    padding: 0 8px;
-    font-size: 0.76rem;
+  .footer-links a,
+  .footer-actions a:first-child,
+  .footer-actions a:first-child::after {
+    padding: 0 6px;
+    font-size: 0.61rem;
   }
 
-  .site-footer::after {
-    right: 8px;
-    bottom: 3px;
-    font-size: 0.58rem;
+  .build-version {
+    right: 7px;
+    bottom: 2px;
+    font-size: 0.49rem;
   }
 }
