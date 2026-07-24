@@ -1,0 +1,169 @@
+:root {
+  --footer-height: 58px;
+}
+
+.hero-card h1 {
+  max-width: 15ch;
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  letter-spacing: -0.04em;
+}
+
+.site-footer {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 1100;
+  display: flex;
+  height: var(--footer-height);
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 1px solid #c9a260;
+  color: #4a4338;
+  background: #f7efdf;
+  box-shadow: none;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.site-footer::after {
+  content: none;
+}
+
+.footer-bottom {
+  order: 1;
+  display: flex;
+  min-height: 23px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  color: #4a4338;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.68rem;
+  text-align: center;
+}
+
+.footer-bottom span:last-child {
+  display: none;
+}
+
+.footer-top {
+  order: 2;
+  display: flex;
+  min-height: 35px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  padding: 1px 0 12px;
+}
+
+.footer-brand {
+  display: none;
+}
+
+.footer-links,
+.footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.footer-links a,
+.footer-actions a:first-child {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 0 7px;
+  border: 0;
+  border-radius: 0;
+  color: #3f4b35;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.footer-links a + a::before,
+.footer-actions::before {
+  color: #b78d50;
+  content: "|";
+  font-size: 0.59rem;
+  text-decoration: none;
+}
+
+.footer-actions a:first-child {
+  font-size: 0;
+}
+
+.footer-actions a:first-child::after {
+  content: "Markellos Ecosystem";
+  font-size: 0.65rem;
+}
+
+.footer-actions a:not(:first-child) {
+  display: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible,
+.footer-actions a:first-child:hover,
+.footer-actions a:first-child:focus-visible {
+  color: #856328;
+}
+
+.build-version {
+  position: fixed;
+  right: 12px;
+  bottom: 2px;
+  z-index: 1150;
+  color: #8d867a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --footer-height: 76px;
+  }
+
+  .hero-card h1 {
+    max-width: 13ch;
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+  }
+
+  .footer-bottom {
+    min-height: 27px;
+    padding: 0 8px;
+    font-size: 0.61rem;
+  }
+
+  .footer-top {
+    min-height: 49px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 1px 6px 16px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    row-gap: 3px;
+  }
+
+  .footer-links a,
+  .footer-actions a:first-child,
+  .footer-actions a:first-child::after {
+    padding: 0 5px;
+    font-size: 0.57rem;
+  }
+
+  .build-version {
+    right: 6px;
+    bottom: 1px;
+    font-size: 0.52rem;
+  }
+}

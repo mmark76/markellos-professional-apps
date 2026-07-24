@@ -1,0 +1,32 @@
+.content-card .section-heading,
+.content-card .hero-lead,
+.content-card .hero-note,
+.content-card .about-copy {
+  width: 100%;
+  max-width: none !important;
+}
+
+.content-card .section-heading > p,
+.content-card .about-copy > p,
+.project-card p,
+.process-card p,
+.fact-card span {
+  width: 100%;
+  max-width: none !important;
+}
+
+.hero-card .hero-lead,
+.hero-card .hero-note {
+  width: 100%;
+  max-width: 100% !important;
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+}
+
+@media (max-width: 700px) {
+  .hero-card .hero-lead,
+  .hero-card .hero-note {
+    text-align: left;
+  }
+}
