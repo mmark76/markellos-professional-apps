@@ -1,5 +1,5 @@
 :root {
-  --footer-height: 78px;
+  --footer-height: 58px;
 }
 
 .site-footer {
@@ -24,13 +24,13 @@
 .footer-bottom {
   order: 1;
   display: flex;
-  min-height: 31px;
+  min-height: 23px;
   align-items: center;
   justify-content: center;
   border: 0;
   color: #4a4338;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   text-align: center;
 }
 
@@ -41,11 +41,11 @@
 .footer-top {
   order: 2;
   display: flex;
-  min-height: 47px;
+  min-height: 35px;
   align-items: flex-start;
   justify-content: center;
   gap: 0;
-  padding: 3px 0 17px;
+  padding: 1px 0 12px;
 }
 
 .footer-brand {
@@ -66,15 +66,15 @@
   display: inline-block;
   width: auto;
   height: auto;
-  padding: 0 8px;
+  padding: 0 7px;
   border: 0;
   border-radius: 0;
   color: #3f4b35;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.69rem;
+  font-size: 0.65rem;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.2;
+  line-height: 1.15;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -84,7 +84,7 @@
 .footer-actions::before {
   color: #b78d50;
   content: "|";
-  font-size: 0.63rem;
+  font-size: 0.59rem;
   text-decoration: none;
 }
 
@@ -94,7 +94,7 @@
 
 .footer-actions a:first-child::after {
   content: "Markellos Ecosystem";
-  font-size: 0.69rem;
+  font-size: 0.65rem;
 }
 
 .footer-actions a:not(:first-child) {
@@ -110,49 +110,49 @@
 
 .build-version {
   position: fixed;
-  right: 14px;
-  bottom: 3px;
+  right: 12px;
+  bottom: 2px;
   z-index: 1150;
   color: #8d867a;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.55rem;
+  font-size: 0.5rem;
   letter-spacing: 0.01em;
   pointer-events: none;
 }
 
 @media (max-width: 700px) {
   :root {
-    --footer-height: 94px;
+    --footer-height: 76px;
   }
 
   .footer-bottom {
-    min-height: 32px;
-    padding: 0 10px;
-    font-size: 0.65rem;
+    min-height: 27px;
+    padding: 0 8px;
+    font-size: 0.61rem;
   }
 
   .footer-top {
-    min-height: 62px;
+    min-height: 49px;
     flex-wrap: wrap;
     align-content: flex-start;
-    padding: 2px 8px 20px;
+    padding: 1px 6px 16px;
   }
 
   .footer-links {
     flex-wrap: wrap;
-    row-gap: 4px;
+    row-gap: 3px;
   }
 
   .footer-links a,
   .footer-actions a:first-child,
   .footer-actions a:first-child::after {
-    padding: 0 6px;
-    font-size: 0.61rem;
+    padding: 0 5px;
+    font-size: 0.57rem;
   }
 
   .build-version {
-    right: 7px;
-    bottom: 2px;
-    font-size: 0.49rem;
+    right: 6px;
+    bottom: 1px;
+    font-size: 0.45rem;
   }
 }
