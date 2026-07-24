@@ -1,0 +1,16 @@
+.content-card .section-heading,
+.content-card .hero-lead,
+.content-card .hero-note,
+.content-card .about-copy {
+  width: 100%;
+  max-width: none;
+}
+
+.content-card .section-heading > p,
+.content-card .about-copy > p,
+.project-card p,
+.process-card p,
+.fact-card span {
+  width: 100%;
+  max-width: none;
+}
