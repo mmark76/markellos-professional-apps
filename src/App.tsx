@@ -6,35 +6,40 @@ const publicCvUrl = 'https://drive.google.com/file/d/1rStT-1HBNTMGJUThcpHNDIZ3eh
 
 function App() {
   const [language, setLanguage] = useState<Language>('en')
+  const [darkMode, setDarkMode] = useState(false)
   const copy = content[language]
 
   const page = language === 'en'
     ? {
         brand: 'Markellos Projects',
+        subtitle: 'Project Portfolio',
         navLabel: 'Primary navigation',
         nav: {
-          projects: 'Projects',
-          about: 'About',
-          approach: 'Process',
-          links: 'Links',
-          cv: 'Public CV',
+          home: 'HOME',
+          projects: 'PROJECTS',
+          about: 'ABOUT',
+          process: 'PROCESS',
+          links: 'LINKS',
         },
-        eyebrow: 'Project portfolio',
+        languageCode: 'EL',
+        languageLabel: 'Ελληνικά',
+        themeLabel: darkMode ? 'Use light theme' : 'Use dark theme',
+        eyebrow: 'PROJECT PORTFOLIO',
         title: 'Projects and applications.',
         lead:
           'A collection of digital tools I have designed and developed around practical ideas, recurring tasks and real needs.',
         note:
           'Some projects are private or service-related and are presented only through general, anonymised descriptions.',
         viewProjects: 'View projects',
-        visitEcosystem: 'Visit the main ecosystem',
-        projectsEyebrow: 'Selected projects',
+        visitEcosystem: 'Visit Markellos Ecosystem',
+        projectsEyebrow: 'SELECTED PROJECTS',
         projectsTitle: 'Three service-related applications.',
         projectsIntro:
           'The portfolio focuses on what each project is intended to do, the problem it addresses and the way it was designed. It does not publish private code or operational data.',
         details: 'Project details',
         technology: 'Technology',
         status: 'Status',
-        aboutEyebrow: 'About this collection',
+        aboutEyebrow: 'ABOUT THIS COLLECTION',
         aboutTitle: 'A simple record of projects I have built.',
         aboutParagraphs: [
           'This website is a personal presentation of projects and applications. It is not a commercial services page and is not intended for job seeking.',
@@ -45,44 +50,51 @@ function App() {
           ['Private', 'source repositories remain protected'],
           ['EN / EL', 'bilingual presentation'],
         ],
-        approachEyebrow: 'Project process',
-        approachTitle: 'How the projects are developed.',
-        privacyTitle: 'Important note',
-        privacyText:
+        processEyebrow: 'PROJECT PROCESS',
+        processTitle: 'How the projects are developed.',
+        noticeTitle: 'Important note',
+        noticeText:
           'This is a personal project portfolio. It is not an official website of any public authority, does not represent an employer and does not offer commercial or official services.',
-        linksEyebrow: 'More',
-        linksTitle: 'Related links',
+        linksEyebrow: 'RELATED LINKS',
+        linksTitle: 'Continue exploring',
         ecosystem: 'Markellos Ecosystem',
-        github: 'GitHub profile',
+        ecosystemText: 'The main personal ecosystem, writing and other interests.',
         cv: 'Public CV',
-        footer: 'Personal portfolio of projects and applications',
+        cvText: 'A public bilingual version of my curriculum vitae.',
+        footerText:
+          'A personal portfolio of selected projects and applications, presented with privacy and confidentiality in mind.',
+        copyright: 'All rights reserved.',
       }
     : {
         brand: 'Markellos Projects',
+        subtitle: 'Portfolio Έργων',
         navLabel: 'Κύρια πλοήγηση',
         nav: {
-          projects: 'Έργα',
-          about: 'Σχετικά',
-          approach: 'Διαδικασία',
-          links: 'Σύνδεσμοι',
-          cv: 'Δημόσιο CV',
+          home: 'ΑΡΧΙΚΗ',
+          projects: 'ΕΡΓΑ',
+          about: 'ΣΧΕΤΙΚΑ',
+          process: 'ΔΙΑΔΙΚΑΣΙΑ',
+          links: 'ΣΥΝΔΕΣΜΟΙ',
         },
-        eyebrow: 'Portfolio έργων',
+        languageCode: 'EN',
+        languageLabel: 'English',
+        themeLabel: darkMode ? 'Χρήση φωτεινού θέματος' : 'Χρήση σκοτεινού θέματος',
+        eyebrow: 'PORTFOLIO ΕΡΓΩΝ',
         title: 'Έργα και εφαρμογές.',
         lead:
           'Μια συλλογή ψηφιακών εργαλείων που έχω σχεδιάσει και αναπτύξει με αφετηρία πρακτικές ιδέες, επαναλαμβανόμενες εργασίες και πραγματικές ανάγκες.',
         note:
           'Ορισμένα έργα είναι ιδιωτικά ή υπηρεσιακής φύσης και παρουσιάζονται μόνο μέσα από γενικές, ανωνυμοποιημένες περιγραφές.',
         viewProjects: 'Προβολή έργων',
-        visitEcosystem: 'Κύριο οικοσύστημα',
-        projectsEyebrow: 'Επιλεγμένα έργα',
+        visitEcosystem: 'Markellos Ecosystem',
+        projectsEyebrow: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ',
         projectsTitle: 'Τρεις εφαρμογές υπηρεσιακής φύσης.',
         projectsIntro:
           'Η παρουσίαση εστιάζει στον σκοπό κάθε έργου, στο πρόβλημα που αντιμετωπίζει και στον τρόπο σχεδιασμού του. Δεν δημοσιεύεται ιδιωτικός κώδικας ή υπηρεσιακά δεδομένα.',
         details: 'Λεπτομέρειες έργου',
         technology: 'Τεχνολογία',
         status: 'Κατάσταση',
-        aboutEyebrow: 'Σχετικά με τη συλλογή',
+        aboutEyebrow: 'ΣΧΕΤΙΚΑ ΜΕ ΤΗ ΣΥΛΛΟΓΗ',
         aboutTitle: 'Μια απλή καταγραφή των έργων που έχω δημιουργήσει.',
         aboutParagraphs: [
           'Η ιστοσελίδα είναι προσωπική παρουσίαση έργων και εφαρμογών. Δεν αποτελεί εμπορική σελίδα υπηρεσιών και δεν έχει σκοπό την αναζήτηση εργασίας.',
@@ -93,25 +105,29 @@ function App() {
           ['Ιδιωτικά', 'τα repositories παραμένουν προστατευμένα'],
           ['EL / EN', 'δίγλωσση παρουσίαση'],
         ],
-        approachEyebrow: 'Διαδικασία έργου',
-        approachTitle: 'Πώς αναπτύσσονται τα έργα.',
-        privacyTitle: 'Σημαντική σημείωση',
-        privacyText:
+        processEyebrow: 'ΔΙΑΔΙΚΑΣΙΑ ΕΡΓΟΥ',
+        processTitle: 'Πώς αναπτύσσονται τα έργα.',
+        noticeTitle: 'Σημαντική σημείωση',
+        noticeText:
           'Πρόκειται για προσωπικό portfolio έργων. Δεν είναι επίσημη ιστοσελίδα δημόσιας αρχής, δεν εκπροσωπεί εργοδότη και δεν παρέχει εμπορικές ή επίσημες υπηρεσίες.',
-        linksEyebrow: 'Περισσότερα',
-        linksTitle: 'Σχετικοί σύνδεσμοι',
+        linksEyebrow: 'ΣΧΕΤΙΚΟΙ ΣΥΝΔΕΣΜΟΙ',
+        linksTitle: 'Περισσότερα',
         ecosystem: 'Markellos Ecosystem',
-        github: 'Προφίλ GitHub',
+        ecosystemText: 'Το κύριο προσωπικό οικοσύστημα, κείμενα και άλλα ενδιαφέροντα.',
         cv: 'Δημόσιο CV',
-        footer: 'Προσωπικό portfolio έργων και εφαρμογών',
+        cvText: 'Η δημόσια δίγλωσση έκδοση του βιογραφικού μου.',
+        footerText:
+          'Προσωπικό portfolio επιλεγμένων έργων και εφαρμογών, με σεβασμό στην ιδιωτικότητα και την εμπιστευτικότητα.',
+        copyright: 'Με επιφύλαξη παντός δικαιώματος.',
       }
 
   useEffect(() => {
     document.documentElement.lang = language
+    document.documentElement.dataset.theme = darkMode ? 'dark' : 'light'
     document.title = language === 'en'
       ? 'Markellos Projects'
       : 'Markellos Projects — Έργα και εφαρμογές'
-  }, [language])
+  }, [language, darkMode])
 
   const toggleLanguage = () => {
     setLanguage((current) => (current === 'en' ? 'el' : 'en'))
@@ -125,151 +141,183 @@ function App() {
         <div className="container header-inner">
           <a className="brand" href="#top" aria-label={page.brand}>
             <span className="brand-mark" aria-hidden="true">MM</span>
-            <span>{page.brand}</span>
+            <span className="brand-copy">
+              <strong>{page.brand}</strong>
+              <small>{page.subtitle}</small>
+            </span>
           </a>
 
           <nav className="main-nav" aria-label={page.navLabel}>
+            <a href="#top">{page.nav.home}</a>
             <a href="#projects">{page.nav.projects}</a>
             <a href="#about">{page.nav.about}</a>
-            <a href="#approach">{page.nav.approach}</a>
+            <a href="#process">{page.nav.process}</a>
             <a href="#links">{page.nav.links}</a>
-            <a href={publicCvUrl} target="_blank" rel="noreferrer">{page.nav.cv}</a>
           </nav>
 
-          <button className="language-button" type="button" onClick={toggleLanguage}>
-            {copy.languageName}
-          </button>
+          <div className="header-actions">
+            <button
+              className="theme-button"
+              type="button"
+              onClick={() => setDarkMode((current) => !current)}
+              aria-label={page.themeLabel}
+              title={page.themeLabel}
+            >
+              <span aria-hidden="true">{darkMode ? '☾' : '☀'}</span>
+            </button>
+            <button className="language-button" type="button" onClick={toggleLanguage}>
+              <strong>{page.languageCode}</strong>
+              <span>{page.languageLabel}</span>
+            </button>
+          </div>
         </div>
       </header>
 
-      <main id="main-content">
-        <section className="hero" id="top">
-          <div className="container hero-content">
-            <p className="eyebrow">{page.eyebrow}</p>
-            <h1>{page.title}</h1>
-            <p className="hero-lead">{page.lead}</p>
-            <p className="hero-note">{page.note}</p>
-            <div className="button-row">
-              <a className="button button-primary" href="#projects">{page.viewProjects}</a>
-              <a className="button button-secondary" href="https://markellosecosystem.com/" target="_blank" rel="noreferrer">
-                {page.visitEcosystem}
-              </a>
-            </div>
+      <main id="main-content" className="page-main">
+        <section className="container content-card hero-card" id="top">
+          <p className="eyebrow">{page.eyebrow}</p>
+          <h1>{page.title}</h1>
+          <p className="hero-lead">{page.lead}</p>
+          <p className="hero-note">{page.note}</p>
+          <div className="button-row">
+            <a className="button button-primary" href="#projects">{page.viewProjects}</a>
+            <a className="button button-secondary" href="https://markellosecosystem.com/" target="_blank" rel="noreferrer">
+              {page.visitEcosystem}
+            </a>
           </div>
         </section>
 
-        <section className="section" id="projects">
-          <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">{page.projectsEyebrow}</p>
-              <h2>{page.projectsTitle}</h2>
-              <p>{page.projectsIntro}</p>
-            </div>
+        <section className="container content-card" id="projects">
+          <div className="section-heading">
+            <p className="eyebrow">{page.projectsEyebrow}</p>
+            <h2>{page.projectsTitle}</h2>
+            <p>{page.projectsIntro}</p>
+          </div>
 
-            <div className="projects-list">
-              {copy.projects.items.map((project, index) => (
-                <article className="project-card" id={project.id} key={project.id}>
-                  <div className="project-number" aria-hidden="true">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
-                  <div className="project-content">
-                    <p className="project-eyebrow">{project.eyebrow}</p>
-                    <h3>{project.title}</h3>
-                    <p className="project-summary">{project.summary}</p>
+          <div className="projects-grid">
+            {copy.projects.items.map((project, index) => (
+              <article className="project-card" id={project.id} key={project.id}>
+                <div className="project-number" aria-hidden="true">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                <div className="project-content">
+                  <p className="project-eyebrow">{project.eyebrow}</p>
+                  <h3>{project.title}</h3>
+                  <p className="project-summary">{project.summary}</p>
 
-                    <details>
-                      <summary>{page.details}</summary>
-                      <div className="project-details">
-                        <div><h4>{copy.projects.labels.problem}</h4><p>{project.problem}</p></div>
-                        <div><h4>{copy.projects.labels.solution}</h4><p>{project.solution}</p></div>
-                        <div><h4>{copy.projects.labels.contribution}</h4><p>{project.contribution}</p></div>
-                        <div><h4>{copy.projects.labels.safeguards}</h4><p>{project.safeguards}</p></div>
-                      </div>
-                    </details>
+                  <details>
+                    <summary>{page.details}</summary>
+                    <div className="project-details">
+                      <div><h4>{copy.projects.labels.problem}</h4><p>{project.problem}</p></div>
+                      <div><h4>{copy.projects.labels.solution}</h4><p>{project.solution}</p></div>
+                      <div><h4>{copy.projects.labels.contribution}</h4><p>{project.contribution}</p></div>
+                      <div><h4>{copy.projects.labels.safeguards}</h4><p>{project.safeguards}</p></div>
+                    </div>
+                  </details>
 
-                    <div className="project-meta">
-                      <div>
-                        <span>{page.technology}</span>
-                        <ul className="tag-list" aria-label={page.technology}>
-                          {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
-                        </ul>
-                      </div>
-                      <div>
-                        <span>{page.status}</span>
-                        <p>{project.status}</p>
-                      </div>
+                  <div className="project-meta">
+                    <div>
+                      <span>{page.technology}</span>
+                      <ul className="tag-list" aria-label={page.technology}>
+                        {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
+                      </ul>
+                    </div>
+                    <div>
+                      <span>{page.status}</span>
+                      <p>{project.status}</p>
                     </div>
                   </div>
-                </article>
-              ))}
-            </div>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="section section-muted" id="about">
-          <div className="container split-layout">
-            <div>
-              <p className="eyebrow">{page.aboutEyebrow}</p>
-              <h2>{page.aboutTitle}</h2>
-            </div>
-            <div className="profile-copy">
-              {page.aboutParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              <div className="facts-grid">
-                {page.facts.map(([value, label]) => (
-                  <div className="fact" key={label}>
-                    <strong>{value}</strong>
-                    <span>{label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <section className="container content-card" id="about">
+          <div className="section-heading">
+            <p className="eyebrow">{page.aboutEyebrow}</p>
+            <h2>{page.aboutTitle}</h2>
+          </div>
+          <div className="about-copy">
+            {page.aboutParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
+          <div className="facts-grid">
+            {page.facts.map(([value, label]) => (
+              <article className="fact-card" key={label}>
+                <strong>{value}</strong>
+                <span>{label}</span>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="section" id="approach">
-          <div className="container">
-            <div className="section-heading">
-              <p className="eyebrow">{page.approachEyebrow}</p>
-              <h2>{page.approachTitle}</h2>
-            </div>
-            <div className="approach-grid">
-              {copy.approach.items.map((item) => (
-                <article key={item.number}>
-                  <span>{item.number}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </article>
-              ))}
-            </div>
+        <section className="container content-card" id="process">
+          <div className="section-heading">
+            <p className="eyebrow">{page.processEyebrow}</p>
+            <h2>{page.processTitle}</h2>
+          </div>
+          <div className="process-grid">
+            {copy.approach.items.map((item) => (
+              <article className="process-card" key={item.number}>
+                <span>{item.number}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="note-section">
-          <div className="container note-card">
-            <h2>{page.privacyTitle}</h2>
-            <p>{page.privacyText}</p>
-          </div>
+        <section className="container content-card notice-card">
+          <h2>{page.noticeTitle}</h2>
+          <p>{page.noticeText}</p>
         </section>
 
-        <section className="section links-section" id="links">
-          <div className="container links-layout">
-            <div>
-              <p className="eyebrow">{page.linksEyebrow}</p>
-              <h2>{page.linksTitle}</h2>
-            </div>
-            <div className="links-list">
-              <a href="https://markellosecosystem.com/" target="_blank" rel="noreferrer">{page.ecosystem}</a>
-              <a href="https://github.com/mmark76" target="_blank" rel="noreferrer">{page.github}</a>
-              <a href={publicCvUrl} target="_blank" rel="noreferrer">{page.cv}</a>
-            </div>
+        <section className="container content-card" id="links">
+          <div className="section-heading">
+            <p className="eyebrow">{page.linksEyebrow}</p>
+            <h2>{page.linksTitle}</h2>
+          </div>
+          <div className="links-grid">
+            <a className="link-card" href="https://markellosecosystem.com/" target="_blank" rel="noreferrer">
+              <strong>{page.ecosystem}</strong>
+              <span>{page.ecosystemText}</span>
+            </a>
+            <a className="link-card" href={publicCvUrl} target="_blank" rel="noreferrer">
+              <strong>{page.cv}</strong>
+              <span>{page.cvText}</span>
+            </a>
           </div>
         </section>
       </main>
 
       <footer className="site-footer">
-        <div className="container footer-inner">
-          <span>© {new Date().getFullYear()} Markellos Markides</span>
-          <span>{page.footer}</span>
+        <div className="container footer-top">
+          <div className="footer-brand">
+            <span className="footer-mark" aria-hidden="true">MM</span>
+            <div>
+              <strong>{page.brand}</strong>
+              <p>{page.footerText}</p>
+            </div>
+          </div>
+
+          <nav className="footer-links" aria-label={page.navLabel}>
+            <a href="#top">{page.nav.home}</a>
+            <a href="#projects">{page.nav.projects}</a>
+            <a href="#about">{page.nav.about}</a>
+            <a href="#process">{page.nav.process}</a>
+            <a href="#links">{page.nav.links}</a>
+          </nav>
+
+          <div className="footer-actions">
+            <a href="https://markellosecosystem.com/" target="_blank" rel="noreferrer" aria-label="Markellos Ecosystem">M</a>
+            <a href={publicCvUrl} target="_blank" rel="noreferrer" aria-label={page.cv}>CV</a>
+            <a href="mailto:markellos.markides@gmail.com" aria-label="Email">@</a>
+          </div>
+        </div>
+
+        <div className="container footer-bottom">
+          <span>© {new Date().getFullYear()} Markellos Markides. {page.copyright}</span>
+          <span>markellosecosystem.com</span>
         </div>
       </footer>
     </>
