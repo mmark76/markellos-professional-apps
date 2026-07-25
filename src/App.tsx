@@ -19,7 +19,6 @@ function App() {
         nav: {
           home: 'HOME',
           projects: 'PROJECTS',
-          about: 'ABOUT',
           process: 'PROCESS',
           cv: 'PUBLIC CV',
         },
@@ -37,26 +36,18 @@ function App() {
         projectsEyebrow: 'SELECTED PROJECTS',
         projectsTitle: 'Selected professional applications.',
         projectsIntro:
-          'The portfolio focuses on what each project is intended to do, the problem it addresses and the way it was designed. It does not publish private code or operational data.',
+          'Each presentation explains the practical need, what the application offers and how it supports everyday work. Private code and operational data are not published.',
         details: 'Project details',
         technology: 'Technology',
-        status: 'Status',
-        aboutEyebrow: 'ABOUT THIS COLLECTION',
-        aboutTitle: 'A simple record of projects I have built.',
-        aboutParagraphs: [
-          'This website is a personal presentation of projects and applications. It is not a commercial services page and is not intended for job seeking.',
-          'The projects are based on practical needs and personal experimentation with software, organisation, automation and digital workflows.',
-        ],
-        facts: [
-          ['3', 'service-related applications'],
-          ['Private', 'source repositories remain protected'],
-          ['EN / EL', 'bilingual presentation'],
-        ],
+        status: 'Stage of development',
         processEyebrow: 'PROJECT PROCESS',
         processTitle: 'How the projects are developed.',
         noticeTitle: 'Important note',
-        noticeText:
-          'This is a personal project portfolio. It is not an official website of any public authority, does not represent an employer and does not offer commercial or official services.',
+        noticeParagraphs: [
+          'This website is a personal presentation of projects and applications. It is not a commercial services page and is not intended for job seeking.',
+          'The projects are based on practical needs and personal experimentation with software, organisation, automation and digital workflows.',
+          'This is not an official website of any public authority, does not represent an employer and does not offer commercial or official services.',
+        ],
         closeNotice: 'Close',
         cv: 'Public CV',
         footerText:
@@ -70,7 +61,6 @@ function App() {
         nav: {
           home: 'ΑΡΧΙΚΗ',
           projects: 'ΕΡΓΑ',
-          about: 'ΣΧΕΤΙΚΑ',
           process: 'ΔΙΑΔΙΚΑΣΙΑ',
           cv: 'ΔΗΜΟΣΙΟ CV',
         },
@@ -88,26 +78,18 @@ function App() {
         projectsEyebrow: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ',
         projectsTitle: 'Επιλεγμένες επαγγελματικές εφαρμογές.',
         projectsIntro:
-          'Η παρουσίαση εστιάζει στον σκοπό κάθε έργου, στο πρόβλημα που αντιμετωπίζει και στον τρόπο σχεδιασμού του. Δεν δημοσιεύεται ιδιωτικός κώδικας ή υπηρεσιακά δεδομένα.',
+          'Κάθε παρουσίαση εξηγεί την πρακτική ανάγκη, τι προσφέρει η εφαρμογή και πώς διευκολύνει την καθημερινή εργασία. Δεν δημοσιεύεται ιδιωτικός κώδικας ή υπηρεσιακά δεδομένα.',
         details: 'Λεπτομέρειες έργου',
         technology: 'Τεχνολογία',
-        status: 'Κατάσταση',
-        aboutEyebrow: 'ΣΧΕΤΙΚΑ ΜΕ ΤΗ ΣΥΛΛΟΓΗ',
-        aboutTitle: 'Μια απλή καταγραφή των έργων που έχω δημιουργήσει.',
-        aboutParagraphs: [
-          'Η ιστοσελίδα είναι προσωπική παρουσίαση έργων και εφαρμογών. Δεν αποτελεί εμπορική σελίδα υπηρεσιών και δεν έχει σκοπό την αναζήτηση εργασίας.',
-          'Τα έργα βασίζονται σε πρακτικές ανάγκες και σε προσωπικό πειραματισμό με λογισμικό, οργάνωση, αυτοματοποίηση και ψηφιακές ροές εργασίας.',
-        ],
-        facts: [
-          ['3', 'εφαρμογές υπηρεσιακής φύσης'],
-          ['Ιδιωτικά', 'τα repositories παραμένουν προστατευμένα'],
-          ['EL / EN', 'δίγλωσση παρουσίαση'],
-        ],
+        status: 'Στάδιο ανάπτυξης',
         processEyebrow: 'ΔΙΑΔΙΚΑΣΙΑ ΕΡΓΟΥ',
         processTitle: 'Πώς αναπτύσσονται τα έργα.',
         noticeTitle: 'Σημαντική σημείωση',
-        noticeText:
-          'Πρόκειται για προσωπικό portfolio έργων. Δεν είναι επίσημη ιστοσελίδα δημόσιας αρχής, δεν εκπροσωπεί εργοδότη και δεν παρέχει εμπορικές ή επίσημες υπηρεσίες.',
+        noticeParagraphs: [
+          'Η ιστοσελίδα είναι προσωπική παρουσίαση έργων και εφαρμογών. Δεν αποτελεί εμπορική σελίδα υπηρεσιών και δεν έχει σκοπό την αναζήτηση εργασίας.',
+          'Τα έργα βασίζονται σε πρακτικές ανάγκες και σε προσωπικό πειραματισμό με λογισμικό, οργάνωση, αυτοματοποίηση και ψηφιακές ροές εργασίας.',
+          'Δεν είναι επίσημη ιστοσελίδα δημόσιας αρχής, δεν εκπροσωπεί εργοδότη και δεν παρέχει εμπορικές ή επίσημες υπηρεσίες.',
+        ],
         closeNotice: 'Κλείσιμο',
         cv: 'Δημόσιο CV',
         footerText:
@@ -161,7 +143,6 @@ function App() {
           <nav className="main-nav" aria-label={page.navLabel}>
             <a href="#top">{page.nav.home}</a>
             <a href="#projects">{page.nav.projects}</a>
-            <a href="#about">{page.nav.about}</a>
             <a href="#process">{page.nav.process}</a>
             <a href={publicCvUrl} target="_blank" rel="noreferrer">{page.nav.cv}</a>
           </nav>
@@ -244,24 +225,6 @@ function App() {
           </div>
         </section>
 
-        <section className="container content-card" id="about">
-          <div className="section-heading">
-            <p className="eyebrow">{page.aboutEyebrow}</p>
-            <h2>{page.aboutTitle}</h2>
-          </div>
-          <div className="about-copy">
-            {page.aboutParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </div>
-          <div className="facts-grid">
-            {page.facts.map(([value, label]) => (
-              <article className="fact-card" key={label}>
-                <strong>{value}</strong>
-                <span>{label}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-
         <section className="container content-card" id="process">
           <div className="section-heading">
             <p className="eyebrow">{page.processEyebrow}</p>
@@ -292,7 +255,6 @@ function App() {
           <nav className="footer-links" aria-label={page.navLabel}>
             <a href="#top">{page.nav.home}</a>
             <a href="#projects">{page.nav.projects}</a>
-            <a href="#about">{page.nav.about}</a>
             <a href="#process">{page.nav.process}</a>
           </nav>
 
@@ -334,7 +296,7 @@ function App() {
                 ×
               </button>
             </div>
-            <p>{page.noticeText}</p>
+            {page.noticeParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           </section>
         </div>
       )}
