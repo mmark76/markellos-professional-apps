@@ -111,19 +111,11 @@
   border-color: rgba(255, 255, 255, 0.22);
 }
 
-/* Keep the main portfolio title on one line and add its professional context. */
+/* Keep the hero title on one line without adding duplicate text. */
 .hero-card h1 {
   max-width: none;
   font-size: clamp(2.2rem, 4.6vw, 4.5rem);
   white-space: nowrap;
-}
-
-html[lang="en"] .hero-card h1::before {
-  content: "Professional ";
-}
-
-html[lang="el"] .hero-card h1::before {
-  content: "Επαγγελματικά ";
 }
 
 @media (max-width: 700px) {
