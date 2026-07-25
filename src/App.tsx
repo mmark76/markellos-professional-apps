@@ -35,7 +35,7 @@ function App() {
         viewProjects: 'View projects',
         visitEcosystem: 'Visit Markellos Ecosystem',
         projectsEyebrow: 'SELECTED PROJECTS',
-        projectsTitle: 'Three service-related applications.',
+        projectsTitle: 'Selected professional applications.',
         projectsIntro:
           'The portfolio focuses on what each project is intended to do, the problem it addresses and the way it was designed. It does not publish private code or operational data.',
         details: 'Project details',
@@ -86,7 +86,7 @@ function App() {
         viewProjects: 'Προβολή έργων',
         visitEcosystem: 'Markellos Ecosystem',
         projectsEyebrow: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ',
-        projectsTitle: 'Τρεις εφαρμογές υπηρεσιακής φύσης.',
+        projectsTitle: 'Επιλεγμένες επαγγελματικές εφαρμογές.',
         projectsIntro:
           'Η παρουσίαση εστιάζει στον σκοπό κάθε έργου, στο πρόβλημα που αντιμετωπίζει και στον τρόπο σχεδιασμού του. Δεν δημοσιεύεται ιδιωτικός κώδικας ή υπηρεσιακά δεδομένα.',
         details: 'Λεπτομέρειες έργου',
