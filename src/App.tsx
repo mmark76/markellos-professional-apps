@@ -26,7 +26,7 @@ function App() {
         languageLabel: 'Ελληνικά',
         themeLabel: darkMode ? 'Use light theme' : 'Use dark theme',
         eyebrow: 'PROFESSIONAL PROJECTS PORTFOLIO',
-        title: 'Projects and applications.',
+        title: 'Professional Projects and apps.',
         lead:
           'A collection of digital tools I have designed and developed around practical ideas, recurring tasks and real needs.',
         note:
