@@ -85,174 +85,150 @@ export const content: Record<Language, PortfolioContent> = {
     nav: {
       profile: 'Profile',
       expertise: 'Expertise',
-      projects: 'Case studies',
-      approach: 'Approach',
+      projects: 'Applications',
+      approach: 'Process',
       contact: 'Contact',
     },
     hero: {
-      eyebrow: 'Engineering judgement · Structured delivery · Practical digital tools',
-      title: 'Professional experience translated into clearer systems and better decisions.',
+      eyebrow: 'Professional experience · Practical needs · Digital tools',
+      title: 'Practical applications created to make everyday work clearer and easier.',
       lead:
-        'Civil engineer, project manager and health-and-safety professional with more than two decades of experience in complex projects, public-sector operations, contracts and organisational improvement.',
-      primaryAction: 'View case studies',
+        'A selection of applications developed from real working needs, with emphasis on organisation, consistency and responsible use.',
+      primaryAction: 'View applications',
       secondaryAction: 'Professional profile',
     },
     profile: {
       eyebrow: 'Professional profile',
-      title: 'Engineering, management and digital process improvement.',
+      title: 'Engineering, management and practical digital improvement.',
       paragraphs: [
-        'My work combines civil-engineering discipline, project and contract management, health-and-safety leadership, and the design of practical digital tools.',
-        'The applications presented here began with real operational needs: fragmented information, repetitive manual work, difficult monitoring and the need for safer, more consistent workflows.',
+        'My work combines civil engineering, project management, health and safety, and the development of practical digital tools.',
+        'The applications presented here were created to reduce repetitive work, organise information and make everyday tasks easier to follow.',
       ],
       facts: [
         { value: '20+', label: 'years of professional experience' },
         { value: 'MBA', label: 'management and strategic perspective' },
-        { value: '3', label: 'selected anonymised case studies' },
+        { value: '3', label: 'selected professional applications' },
       ],
     },
     expertise: {
-      eyebrow: 'Areas of expertise',
-      title: 'A multidisciplinary professional foundation.',
+      eyebrow: 'Areas of experience',
+      title: 'Professional knowledge applied to practical problems.',
       intro:
-        'The portfolio focuses on the intersection of technical responsibility, organisational management and responsible software design.',
+        'The applications reflect experience in engineering, management, health and safety, administration and workplace organisation.',
       items: [
-        {
-          title: 'Civil Engineering',
-          description:
-            'Infrastructure, technical coordination, structured problem solving and evidence-based professional judgement.',
-        },
-        {
-          title: 'Project & Contract Management',
-          description:
-            'Planning, priorities, stakeholders, deliverables, risks, contractual obligations and controlled execution.',
-        },
-        {
-          title: 'Health & Safety',
-          description:
-            'Risk assessment, preventive measures, governance, training, monitoring and management information.',
-        },
-        {
-          title: 'Digital Process Improvement',
-          description:
-            'Turning repetitive or fragmented workflows into maintainable, user-centred digital systems.',
-        },
-        {
-          title: 'Public-Sector Operations',
-          description:
-            'Solutions shaped by accountability, traceability, accessibility, confidentiality and procedural constraints.',
-        },
-        {
-          title: 'System Design',
-          description:
-            'Modular architecture, local-first workflows, data protection, role-based access and documented decisions.',
-        },
+        { title: 'Civil Engineering', description: 'Technical coordination, structured problem solving and responsible decision-making.' },
+        { title: 'Project & Contract Management', description: 'Planning work, setting priorities, monitoring progress and managing responsibilities.' },
+        { title: 'Health & Safety', description: 'Organising risks, preventive measures, responsibilities, training and follow-up actions.' },
+        { title: 'Process Improvement', description: 'Making repetitive or fragmented work simpler, clearer and easier to manage.' },
+        { title: 'Public-Sector Work', description: 'Respecting procedures, confidentiality, accountability and organisational responsibilities.' },
+        { title: 'Application Design', description: 'Creating tools that are understandable, useful and appropriate for their intended purpose.' },
       ],
     },
     projects: {
       eyebrow: 'Selected work',
-      title: 'Anonymised professional case studies.',
+      title: 'Selected professional applications.',
       intro:
-        'These summaries describe the problem-solving approach and engineering decisions without publishing private source code, operational records or internal infrastructure details.',
+        'The descriptions focus on why each application was created, what it offers and how it supports everyday work.',
       labels: {
-        problem: 'Operational need',
-        solution: 'Solution',
-        contribution: 'My contribution',
+        problem: 'Why it was created',
+        solution: 'What it offers',
+        contribution: 'My role',
         technologies: 'Technology',
-        safeguards: 'Safeguards',
-        status: 'Status',
+        safeguards: 'Protection and limitations',
+        status: 'Stage of development',
       },
       items: [
         {
           id: 'health-safety',
-          eyebrow: 'Health, safety and governance',
+          eyebrow: 'Workplace safety and organisation',
           title: 'Health & Safety Management Application',
           summary:
-            'A human-centred web application concept for organising, monitoring and documenting workplace safety, health and wellbeing in office environments.',
+            'An application for keeping workplace safety information organised and easier to monitor.',
           problem:
-            'Risk assessments, responsibilities, measures, training records and legal references can become fragmented across documents and difficult to monitor consistently.',
+            'Risk assessments, responsibilities, preventive measures and training records are often spread across different documents, making regular follow-up difficult.',
           solution:
-            'A structured application model covering organisational units, workplaces, affected groups, risk assessments, preventive actions, training, compliance and management dashboards.',
+            'It brings the main information together in one organised environment, helping users record risks, follow actions and maintain a clearer overview.',
           contribution:
-            'Requirements definition, information architecture, workflows, data-governance principles, security model, technical direction and iterative product review.',
-          technologies: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Docker', 'Role-based access'],
+            'I identified the needs, organised the way the application should work and guided its design and gradual improvement.',
+          technologies: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Docker', 'Controlled access'],
           safeguards:
-            'Demonstration data only; backend-enforced permissions; secure-session design; no claim of official approval or replacement of legal and professional duties.',
-          status: 'Private development prototype; not approved for real operational records.',
+            'The public presentation uses demonstration data only. The application does not replace approved procedures, legal duties or professional judgement.',
+          status: 'Private development prototype for evaluation and further improvement.',
         },
         {
           id: 'treasury',
-          eyebrow: 'Administrative workflow and document production',
+          eyebrow: 'Document preparation and calculations',
           title: 'Electronic Treasury Workflow',
           summary:
-            'A focused local-first application for completing a structured treasury form, reusing field templates, calculating totals and producing an A4 print/PDF result.',
+            'An application that helps prepare a structured treasury document with fewer repeated entries and calculations.',
           problem:
-            'Repeated manual entry, arithmetic, numbering and document preparation increase effort and create opportunities for inconsistency.',
+            'Repeated typing, manual calculations, document numbering and preparation take time and can lead to avoidable inconsistencies.',
           solution:
-            'Field-level reusable templates, automatic VAT and total calculations, amount-to-Greek-words conversion, controlled numbering, autosave, preview, printing and personal archive export/restore.',
+            'It reuses common information, calculates totals automatically, prepares the document for printing or PDF and keeps a personal archive.',
           contribution:
-            'Workflow analysis, functional requirements, calculation rules, numbering safeguards, local-data model, backup design and modular frontend architecture.',
-          technologies: ['HTML', 'CSS', 'JavaScript modules', 'LocalStorage', 'Print CSS', 'JSON backup'],
+            'I studied the existing work, defined the required functions and organised the calculation, numbering, saving and backup rules.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Local storage', 'Print/PDF support', 'Backup file'],
           safeguards:
-            'Local-only storage, explicit backup warnings, validation before restore and no central server or claim of being an official treasury system.',
-          status: 'Private local-first MVP for controlled personal use.',
+            'Information remains on the user’s computer. The application is a personal support tool and is not presented as an official treasury system.',
+          status: 'Private working version for controlled personal use.',
         },
         {
           id: 'roster',
-          eyebrow: 'Planning, productivity and desktop delivery',
+          eyebrow: 'Monthly planning and record keeping',
           title: 'Monthly Service Roster Tool',
           summary:
-            'A personal local-first tool for preparing and editing monthly service rosters, calculating totals and producing print/PDF outputs.',
+            'A personal application for preparing monthly service rosters and producing clear printable results.',
           problem:
-            'Monthly rosters require repetitive entry, accurate separation of periods, treatment of weekends and holidays, totals and reliable personal archiving.',
+            'Monthly rosters require repeated entries, correct handling of dates, weekends and holidays, accurate totals and reliable personal archiving.',
           solution:
-            'Independent monthly workspaces, personnel records, automatic persistence, holiday handling, totals, JSON backup/restore and a Windows desktop shell.',
+            'It provides a separate workspace for each month, remembers personnel information, calculates totals and supports printing, PDF and backup.',
           contribution:
-            'Product scope, workflow modelling, period isolation, stable personnel references, backup strategy, desktop packaging direction and staged roadmap planning.',
-          technologies: ['React', 'TypeScript', 'IndexedDB', 'Tauri 2', 'Rust toolchain', 'Windows installer'],
+            'I defined the purpose and workflow, organised the monthly records and planned the saving, backup and desktop use of the application.',
+          technologies: ['React', 'TypeScript', 'Local database', 'Desktop application', 'Windows installer'],
           safeguards:
-            'Personal-assistance scope only, offline-oriented design, no backend or synchronisation, and mandatory verification through approved organisational procedures.',
-          status: 'Private local-first application under desktop release validation.',
+            'It is intended only as a personal aid. Final information must always be checked through the organisation’s approved procedures.',
+          status: 'Private application currently being checked for desktop use.',
         },
       ],
     },
     approach: {
-      eyebrow: 'Working approach',
-      title: 'From operational need to maintainable solution.',
+      eyebrow: 'How I work',
+      title: 'How the projects are developed.',
       intro:
-        'The objective is not merely to digitise a form. It is to understand the work, control the risks and create a system that can evolve without losing clarity.',
+        'Each project starts with a practical need and develops gradually through understanding, design, testing and improvement.',
       items: [
         {
           number: '01',
-          title: 'Understand the real workflow',
-          description: 'Map users, decisions, exceptions, documents, responsibilities and constraints before choosing technology.',
+          title: 'Understand the need',
+          description: 'First, I study what people are trying to do, where difficulties appear and what information they need.',
         },
         {
           number: '02',
-          title: 'Define boundaries and safeguards',
-          description: 'Separate prototype from production, public from private, and convenience from legal or professional authority.',
+          title: 'Set clear limits',
+          description: 'I define what the application should do, what it should not do and which responsibilities must remain with the user or organisation.',
         },
         {
           number: '03',
-          title: 'Build a modular foundation',
-          description: 'Use clear data ownership, reusable components, documented decisions and testable workflows.',
+          title: 'Build step by step',
+          description: 'The main functions are created gradually so that the application remains clear, manageable and easy to improve.',
         },
         {
           number: '04',
-          title: 'Validate and improve',
-          description: 'Review behaviour, accessibility, security, backup, deployment and user understanding in successive stages.',
+          title: 'Test and improve',
+          description: 'The application is reviewed in practice, problems are corrected and improvements are added in successive stages.',
         },
       ],
     },
     confidentiality: {
-      title: 'Confidentiality by design',
+      title: 'Confidentiality',
       text:
-        'This portfolio intentionally excludes private repositories, real operational data, internal correspondence, credentials, identifiable records and security-sensitive deployment information. Any future screenshots will use fabricated data.',
+        'The portfolio does not include private code, real operational data, internal correspondence, credentials or identifiable records. Examples use fabricated data.',
     },
     contact: {
       eyebrow: 'Contact',
       title: 'Professional discussion and collaboration.',
       text:
-        'For discussions related to project management, health and safety, process improvement or responsible digital tools, contact me by email.',
+        'For discussions related to project management, health and safety, process improvement or practical digital tools, contact me by email.',
       emailAction: 'Send email',
       ecosystemAction: 'Visit Markellos Ecosystem',
     },
@@ -264,169 +240,151 @@ export const content: Record<Language, PortfolioContent> = {
     brand: 'Markellos Professional Apps',
     nav: {
       profile: 'Προφίλ',
-      expertise: 'Εξειδίκευση',
-      projects: 'Μελέτες περίπτωσης',
-      approach: 'Προσέγγιση',
+      expertise: 'Εμπειρία',
+      projects: 'Εφαρμογές',
+      approach: 'Διαδικασία',
       contact: 'Επικοινωνία',
     },
     hero: {
-      eyebrow: 'Τεχνική κρίση · Δομημένη υλοποίηση · Πρακτικά ψηφιακά εργαλεία',
-      title: 'Η επαγγελματική εμπειρία μετατρέπεται σε σαφέστερα συστήματα και καλύτερες αποφάσεις.',
+      eyebrow: 'Επαγγελματική εμπειρία · Πρακτικές ανάγκες · Ψηφιακά εργαλεία',
+      title: 'Πρακτικές εφαρμογές που κάνουν την καθημερινή εργασία σαφέστερη και ευκολότερη.',
       lead:
-        'Πολιτικός μηχανικός, διαχειριστής έργων και επαγγελματίας ασφάλειας και υγείας με περισσότερες από δύο δεκαετίες εμπειρίας σε σύνθετα έργα, λειτουργίες δημόσιου τομέα, συμβάσεις και οργανωτική βελτίωση.',
-      primaryAction: 'Προβολή έργων',
+        'Μια επιλογή εφαρμογών που αναπτύχθηκαν από πραγματικές ανάγκες εργασίας, με έμφαση στην οργάνωση, τη συνέπεια και την υπεύθυνη χρήση.',
+      primaryAction: 'Προβολή εφαρμογών',
       secondaryAction: 'Επαγγελματικό προφίλ',
     },
     profile: {
       eyebrow: 'Επαγγελματικό προφίλ',
-      title: 'Μηχανική, διοίκηση και ψηφιακή βελτίωση διαδικασιών.',
+      title: 'Μηχανική, διοίκηση και πρακτική ψηφιακή βελτίωση.',
       paragraphs: [
-        'Η εργασία μου συνδυάζει την πειθαρχία του πολιτικού μηχανικού, τη διαχείριση έργων και συμβάσεων, την ηγεσία στην ασφάλεια και υγεία και τον σχεδιασμό πρακτικών ψηφιακών εργαλείων.',
-        'Οι εφαρμογές που παρουσιάζονται εδώ ξεκίνησαν από πραγματικές λειτουργικές ανάγκες: κατακερματισμένη πληροφορία, επαναλαμβανόμενη χειροκίνητη εργασία, δύσκολη παρακολούθηση και ανάγκη για ασφαλέστερες και συνεπέστερες ροές εργασίας.',
+        'Η εργασία μου συνδυάζει την πολιτική μηχανική, τη διαχείριση έργων, την ασφάλεια και υγεία και την ανάπτυξη πρακτικών ψηφιακών εργαλείων.',
+        'Οι εφαρμογές που παρουσιάζονται εδώ δημιουργήθηκαν για να μειώνουν την επαναλαμβανόμενη εργασία, να οργανώνουν πληροφορίες και να διευκολύνουν καθημερινές εργασίες.',
       ],
       facts: [
         { value: '20+', label: 'χρόνια επαγγελματικής εμπειρίας' },
         { value: 'MBA', label: 'διοικητική και στρατηγική οπτική' },
-        { value: '3', label: 'επιλεγμένες ανώνυμες μελέτες περίπτωσης' },
+        { value: '3', label: 'επιλεγμένες επαγγελματικές εφαρμογές' },
       ],
     },
     expertise: {
-      eyebrow: 'Τομείς εξειδίκευσης',
-      title: 'Μια διεπιστημονική επαγγελματική βάση.',
+      eyebrow: 'Τομείς εμπειρίας',
+      title: 'Επαγγελματική γνώση εφαρμοσμένη σε πρακτικά προβλήματα.',
       intro:
-        'Το portfolio εστιάζει στη σύνδεση τεχνικής ευθύνης, οργανωτικής διοίκησης και υπεύθυνου σχεδιασμού λογισμικού.',
+        'Οι εφαρμογές συνδυάζουν εμπειρία στη μηχανική, τη διοίκηση, την ασφάλεια και υγεία, τη διοικητική εργασία και την οργάνωση.',
       items: [
-        {
-          title: 'Πολιτική Μηχανική',
-          description: 'Υποδομές, τεχνικός συντονισμός, δομημένη επίλυση προβλημάτων και τεκμηριωμένη επαγγελματική κρίση.',
-        },
-        {
-          title: 'Διαχείριση Έργων και Συμβάσεων',
-          description: 'Προγραμματισμός, προτεραιότητες, εμπλεκόμενοι, παραδοτέα, κίνδυνοι, συμβατικές υποχρεώσεις και ελεγχόμενη εκτέλεση.',
-        },
-        {
-          title: 'Ασφάλεια και Υγεία',
-          description: 'Εκτίμηση κινδύνου, προληπτικά μέτρα, διακυβέρνηση, εκπαίδευση, παρακολούθηση και πληροφόρηση διοίκησης.',
-        },
-        {
-          title: 'Ψηφιακή Βελτίωση Διαδικασιών',
-          description: 'Μετατροπή επαναλαμβανόμενων ή κατακερματισμένων εργασιών σε συντηρήσιμα και ανθρωποκεντρικά ψηφιακά συστήματα.',
-        },
-        {
-          title: 'Λειτουργίες Δημόσιου Τομέα',
-          description: 'Λύσεις με έμφαση στη λογοδοσία, ιχνηλασιμότητα, προσβασιμότητα, εμπιστευτικότητα και διαδικαστικούς περιορισμούς.',
-        },
-        {
-          title: 'Σχεδιασμός Συστημάτων',
-          description: 'Αρθρωτή αρχιτεκτονική, local-first ροές, προστασία δεδομένων, πρόσβαση βάσει ρόλων και τεκμηριωμένες αποφάσεις.',
-        },
+        { title: 'Πολιτική Μηχανική', description: 'Τεχνικός συντονισμός, δομημένη επίλυση προβλημάτων και υπεύθυνη λήψη αποφάσεων.' },
+        { title: 'Διαχείριση Έργων και Συμβάσεων', description: 'Προγραμματισμός εργασιών, καθορισμός προτεραιοτήτων, παρακολούθηση προόδου και διαχείριση ευθυνών.' },
+        { title: 'Ασφάλεια και Υγεία', description: 'Οργάνωση κινδύνων, προληπτικών μέτρων, αρμοδιοτήτων, εκπαίδευσης και ενεργειών παρακολούθησης.' },
+        { title: 'Βελτίωση Διαδικασιών', description: 'Απλοποίηση επαναλαμβανόμενων ή κατακερματισμένων εργασιών ώστε να γίνονται σαφέστερες και ευκολότερες.' },
+        { title: 'Εργασία στον Δημόσιο Τομέα', description: 'Σεβασμός στις διαδικασίες, την εμπιστευτικότητα, τη λογοδοσία και τις οργανωτικές αρμοδιότητες.' },
+        { title: 'Σχεδιασμός Εφαρμογών', description: 'Δημιουργία εργαλείων που είναι κατανοητά, χρήσιμα και κατάλληλα για τον σκοπό τους.' },
       ],
     },
     projects: {
       eyebrow: 'Επιλεγμένα έργα',
-      title: 'Ανώνυμες επαγγελματικές μελέτες περίπτωσης.',
+      title: 'Επιλεγμένες επαγγελματικές εφαρμογές.',
       intro:
-        'Οι περιλήψεις παρουσιάζουν την προσέγγιση επίλυσης προβλημάτων και τις τεχνικές αποφάσεις χωρίς δημοσίευση ιδιωτικού κώδικα, υπηρεσιακών δεδομένων ή εσωτερικών πληροφοριών υποδομής.',
+        'Οι περιγραφές εξηγούν γιατί δημιουργήθηκε κάθε εφαρμογή, τι προσφέρει και πώς υποστηρίζει την καθημερινή εργασία.',
       labels: {
-        problem: 'Λειτουργική ανάγκη',
-        solution: 'Λύση',
-        contribution: 'Η συμβολή μου',
+        problem: 'Γιατί δημιουργήθηκε',
+        solution: 'Τι προσφέρει',
+        contribution: 'Ο ρόλος μου',
         technologies: 'Τεχνολογία',
-        safeguards: 'Δικλίδες προστασίας',
-        status: 'Κατάσταση',
+        safeguards: 'Προστασία και περιορισμοί',
+        status: 'Στάδιο ανάπτυξης',
       },
       items: [
         {
           id: 'health-safety',
-          eyebrow: 'Ασφάλεια, υγεία και διακυβέρνηση',
+          eyebrow: 'Ασφάλεια στον χώρο εργασίας και οργάνωση',
           title: 'Εφαρμογή Διαχείρισης Ασφάλειας και Υγείας',
           summary:
-            'Ανθρωποκεντρική διαδικτυακή εφαρμογή για οργάνωση, παρακολούθηση και τεκμηρίωση της ασφάλειας, υγείας και ευημερίας σε χώρους γραφείων.',
+            'Εφαρμογή για την οργανωμένη καταγραφή και ευκολότερη παρακολούθηση πληροφοριών ασφάλειας και υγείας στην εργασία.',
           problem:
-            'Οι εκτιμήσεις κινδύνου, οι ευθύνες, τα μέτρα, η εκπαίδευση και οι νομικές αναφορές μπορεί να είναι κατακερματισμένες και δύσκολες στη συνεπή παρακολούθηση.',
+            'Οι εκτιμήσεις κινδύνου, οι αρμοδιότητες, τα μέτρα προστασίας και τα στοιχεία εκπαίδευσης βρίσκονται συχνά σε διαφορετικά έγγραφα, γεγονός που δυσκολεύει την παρακολούθησή τους.',
           solution:
-            'Δομημένο μοντέλο που καλύπτει οργανωτικές μονάδες, χώρους εργασίας, επηρεαζόμενες ομάδες, εκτιμήσεις κινδύνου, μέτρα, εκπαίδευση, συμμόρφωση και πίνακες διοικητικής πληροφόρησης.',
+            'Συγκεντρώνει τις βασικές πληροφορίες σε ένα οργανωμένο περιβάλλον και βοηθά στην καταγραφή κινδύνων, την παρακολούθηση ενεργειών και τη διατήρηση σαφέστερης εικόνας.',
           contribution:
-            'Καθορισμός απαιτήσεων, αρχιτεκτονική πληροφορίας, ροές εργασίας, αρχές διακυβέρνησης δεδομένων, μοντέλο ασφάλειας, τεχνική κατεύθυνση και επαναληπτική αξιολόγηση.',
-          technologies: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Docker', 'Πρόσβαση βάσει ρόλων'],
+            'Καθόρισα τις ανάγκες που έπρεπε να καλύπτει η εφαρμογή, οργάνωσα τον τρόπο λειτουργίας της και καθοδήγησα τον σχεδιασμό και τη σταδιακή βελτίωσή της.',
+          technologies: ['React', 'TypeScript', 'Express', 'PostgreSQL', 'Docker', 'Ελεγχόμενη πρόσβαση'],
           safeguards:
-            'Μόνο δεδομένα επίδειξης, δικαιώματα που επιβάλλονται από το backend, ασφαλής σχεδιασμός συνεδριών και καμία δήλωση επίσημης έγκρισης ή αντικατάστασης νομικών υποχρεώσεων.',
-          status: 'Ιδιωτικό πρωτότυπο ανάπτυξης· δεν έχει εγκριθεί για πραγματικά υπηρεσιακά δεδομένα.',
+            'Η δημόσια παρουσίαση χρησιμοποιεί μόνο υποθετικά στοιχεία. Η εφαρμογή δεν αντικαθιστά τις εγκεκριμένες διαδικασίες, τις νομικές υποχρεώσεις ή την επαγγελματική κρίση.',
+          status: 'Ιδιωτικό πρωτότυπο ανάπτυξης για αξιολόγηση και περαιτέρω βελτίωση.',
         },
         {
           id: 'treasury',
-          eyebrow: 'Διοικητική ροή και παραγωγή εγγράφων',
+          eyebrow: 'Προετοιμασία εγγράφων και υπολογισμοί',
           title: 'Ηλεκτρονική Ροή Εργασίας Ταμείου',
           summary:
-            'Στοχευμένη local-first εφαρμογή για συμπλήρωση δομημένου εντύπου, επαναχρησιμοποίηση προτύπων, υπολογισμούς και παραγωγή αποτελέσματος Α4 για εκτύπωση ή PDF.',
+            'Εφαρμογή που βοηθά στην προετοιμασία δομημένου εγγράφου ταμείου με λιγότερες επαναλαμβανόμενες καταχωρίσεις και υπολογισμούς.',
           problem:
-            'Η επαναλαμβανόμενη εισαγωγή, οι υπολογισμοί, η αρίθμηση και η προετοιμασία εγγράφων αυξάνουν τον φόρτο και τον κίνδυνο ασυνέπειας.',
+            'Η επαναλαμβανόμενη πληκτρολόγηση, οι χειροκίνητοι υπολογισμοί, η αρίθμηση και η προετοιμασία εγγράφων απαιτούν χρόνο και μπορεί να προκαλέσουν ασυνέπειες.',
           solution:
-            'Πρότυπα ανά πεδίο, αυτόματος υπολογισμός ΦΠΑ και συνόλου, μετατροπή ποσού σε ελληνικές λέξεις, ελεγχόμενη αρίθμηση, αυτόματη αποθήκευση, προεπισκόπηση, εκτύπωση και προσωπικό αρχείο.',
+            'Επαναχρησιμοποιεί συνηθισμένες πληροφορίες, υπολογίζει αυτόματα τα σύνολα, προετοιμάζει το έγγραφο για εκτύπωση ή PDF και διατηρεί προσωπικό αρχείο.',
           contribution:
-            'Ανάλυση ροής, λειτουργικές απαιτήσεις, κανόνες υπολογισμού, δικλίδες αρίθμησης, μοντέλο τοπικών δεδομένων, σχεδιασμός backup και αρθρωτή frontend αρχιτεκτονική.',
-          technologies: ['HTML', 'CSS', 'JavaScript modules', 'LocalStorage', 'Print CSS', 'JSON backup'],
+            'Μελέτησα την υφιστάμενη εργασία, καθόρισα τις απαραίτητες λειτουργίες και οργάνωσα τους κανόνες υπολογισμού, αρίθμησης, αποθήκευσης και δημιουργίας αντιγράφων ασφαλείας.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Τοπική αποθήκευση', 'Εκτύπωση/PDF', 'Αρχείο αντιγράφου ασφαλείας'],
           safeguards:
-            'Αποθήκευση μόνο τοπικά, σαφείς προειδοποιήσεις backup, επικύρωση πριν από επαναφορά και καμία παρουσίαση ως επίσημο κεντρικό σύστημα.',
-          status: 'Ιδιωτικό local-first MVP για ελεγχόμενη προσωπική χρήση.',
+            'Οι πληροφορίες παραμένουν στον υπολογιστή του χρήστη. Η εφαρμογή είναι προσωπικό βοηθητικό εργαλείο και δεν παρουσιάζεται ως επίσημο σύστημα ταμείου.',
+          status: 'Ιδιωτική λειτουργική έκδοση για ελεγχόμενη προσωπική χρήση.',
         },
         {
           id: 'roster',
-          eyebrow: 'Προγραμματισμός, παραγωγικότητα και desktop διάθεση',
+          eyebrow: 'Μηνιαίος προγραμματισμός και αρχειοθέτηση',
           title: 'Εργαλείο Μηνιαίων Καταστάσεων Υπηρεσιών',
           summary:
-            'Προσωπικό local-first εργαλείο για προετοιμασία και επεξεργασία μηνιαίων καταστάσεων, υπολογισμό συνόλων και παραγωγή εκτύπωσης/PDF.',
+            'Προσωπική εφαρμογή για την προετοιμασία μηνιαίων καταστάσεων υπηρεσιών και την παραγωγή καθαρών εκτυπώσιμων αποτελεσμάτων.',
           problem:
-            'Οι μηνιαίες καταστάσεις απαιτούν επαναλαμβανόμενη εισαγωγή, σωστό διαχωρισμό περιόδων, χειρισμό Σαββατοκύριακων και αργιών, σύνολα και αξιόπιστη προσωπική αρχειοθέτηση.',
+            'Οι μηνιαίες καταστάσεις απαιτούν επαναλαμβανόμενες καταχωρίσεις, σωστό χειρισμό ημερομηνιών, Σαββατοκύριακων και αργιών, ακριβή σύνολα και αξιόπιστη αρχειοθέτηση.',
           solution:
-            'Ανεξάρτητοι μηνιαίοι χώροι εργασίας, αρχείο προσωπικού, αυτόματη αποθήκευση, διαχείριση αργιών, σύνολα, JSON backup/restore και Windows desktop shell.',
+            'Παρέχει ξεχωριστό χώρο εργασίας για κάθε μήνα, θυμάται τα στοιχεία προσωπικού, υπολογίζει σύνολα και υποστηρίζει εκτύπωση, PDF και δημιουργία αντιγράφου ασφαλείας.',
           contribution:
-            'Καθορισμός προϊόντος, μοντελοποίηση ροής, απομόνωση περιόδων, σταθερές αναφορές προσωπικού, στρατηγική backup, κατεύθυνση desktop συσκευασίας και σταδιακό roadmap.',
-          technologies: ['React', 'TypeScript', 'IndexedDB', 'Tauri 2', 'Rust toolchain', 'Windows installer'],
+            'Καθόρισα τον σκοπό και τη ροή εργασίας, οργάνωσα τις μηνιαίες καταστάσεις και σχεδίασα την αποθήκευση, τη δημιουργία αντιγράφων ασφαλείας και τη χρήση ως εφαρμογή υπολογιστή.',
+          technologies: ['React', 'TypeScript', 'Τοπική βάση δεδομένων', 'Εφαρμογή υπολογιστή', 'Windows installer'],
           safeguards:
-            'Μόνο ως προσωπικό βοηθητικό εργαλείο, offline προσανατολισμός, χωρίς backend ή συγχρονισμό και υποχρεωτική επαλήθευση μέσω εγκεκριμένων διαδικασιών.',
-          status: 'Ιδιωτική local-first εφαρμογή σε φάση ελέγχου desktop έκδοσης.',
+            'Προορίζεται μόνο ως προσωπικό βοηθητικό εργαλείο. Οι τελικές πληροφορίες πρέπει πάντοτε να ελέγχονται μέσω των εγκεκριμένων διαδικασιών του οργανισμού.',
+          status: 'Ιδιωτική εφαρμογή που βρίσκεται σε έλεγχο για χρήση σε υπολογιστή.',
         },
       ],
     },
     approach: {
       eyebrow: 'Τρόπος εργασίας',
-      title: 'Από τη λειτουργική ανάγκη σε μια συντηρήσιμη λύση.',
+      title: 'Πώς αναπτύσσονται τα έργα.',
       intro:
-        'Ο στόχος δεν είναι απλώς η ψηφιοποίηση ενός εντύπου. Είναι η κατανόηση της εργασίας, ο έλεγχος των κινδύνων και η δημιουργία ενός συστήματος που εξελίσσεται χωρίς να χάνει τη σαφήνειά του.',
+        'Κάθε έργο ξεκινά από μια πρακτική ανάγκη και εξελίσσεται σταδιακά μέσα από κατανόηση, σχεδιασμό, δοκιμή και βελτίωση.',
       items: [
         {
           number: '01',
-          title: 'Κατανόηση της πραγματικής ροής',
-          description: 'Χαρτογράφηση χρηστών, αποφάσεων, εξαιρέσεων, εγγράφων, ευθυνών και περιορισμών πριν από την επιλογή τεχνολογίας.',
+          title: 'Κατανόηση της ανάγκης',
+          description: 'Αρχικά μελετώ τι προσπαθούν να κάνουν οι χρήστες, πού εμφανίζονται δυσκολίες και ποιες πληροφορίες χρειάζονται.',
         },
         {
           number: '02',
-          title: 'Όρια και δικλίδες προστασίας',
-          description: 'Διάκριση πρωτοτύπου από παραγωγή, δημόσιου από ιδιωτικό και ευκολίας από νομική ή επαγγελματική αυθεντία.',
+          title: 'Καθορισμός σαφών ορίων',
+          description: 'Ορίζω τι πρέπει να κάνει η εφαρμογή, τι δεν πρέπει να κάνει και ποιες ευθύνες παραμένουν στον χρήστη ή στον οργανισμό.',
         },
         {
           number: '03',
-          title: 'Αρθρωτή θεμελίωση',
-          description: 'Σαφής ιδιοκτησία δεδομένων, επαναχρησιμοποιήσιμα στοιχεία, τεκμηριωμένες αποφάσεις και ελέγξιμες ροές.',
+          title: 'Σταδιακή κατασκευή',
+          description: 'Οι βασικές λειτουργίες δημιουργούνται βήμα προς βήμα, ώστε η εφαρμογή να παραμένει σαφής, διαχειρίσιμη και εύκολη στη βελτίωση.',
         },
         {
           number: '04',
-          title: 'Έλεγχος και βελτίωση',
-          description: 'Διαδοχικός έλεγχος συμπεριφοράς, προσβασιμότητας, ασφάλειας, backup, διάθεσης και κατανόησης από τον χρήστη.',
+          title: 'Δοκιμή και βελτίωση',
+          description: 'Η εφαρμογή ελέγχεται στην πράξη, τα προβλήματα διορθώνονται και νέες βελτιώσεις προστίθενται σταδιακά.',
         },
       ],
     },
     confidentiality: {
-      title: 'Εμπιστευτικότητα από τον σχεδιασμό',
+      title: 'Εμπιστευτικότητα',
       text:
-        'Το portfolio αποκλείει σκόπιμα ιδιωτικά repositories, πραγματικά υπηρεσιακά δεδομένα, εσωτερική αλληλογραφία, διαπιστευτήρια, αναγνωρίσιμες εγγραφές και ευαίσθητες πληροφορίες διάθεσης. Μελλοντικά screenshots θα χρησιμοποιούν αποκλειστικά εικονικά δεδομένα.',
+        'Το portfolio δεν περιλαμβάνει ιδιωτικό κώδικα, πραγματικά υπηρεσιακά δεδομένα, εσωτερική αλληλογραφία, διαπιστευτήρια ή αναγνωρίσιμα στοιχεία. Τα παραδείγματα χρησιμοποιούν υποθετικά δεδομένα.',
     },
     contact: {
       eyebrow: 'Επικοινωνία',
       title: 'Επαγγελματική συζήτηση και συνεργασία.',
       text:
-        'Για θέματα διαχείρισης έργων, ασφάλειας και υγείας, βελτίωσης διαδικασιών ή υπεύθυνων ψηφιακών εργαλείων, επικοινωνήστε μαζί μου μέσω email.',
+        'Για συζητήσεις σχετικά με τη διαχείριση έργων, την ασφάλεια και υγεία, τη βελτίωση διαδικασιών ή πρακτικά ψηφιακά εργαλεία, μπορείτε να επικοινωνήσετε μαζί μου μέσω email.',
       emailAction: 'Αποστολή email',
       ecosystemAction: 'Markellos Ecosystem',
     },
