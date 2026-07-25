@@ -1,3 +1,7 @@
+.hero-card {
+  min-height: auto !important;
+}
+
 .hero-card .button-row {
   display: none !important;
 }
