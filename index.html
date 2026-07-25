@@ -25,11 +25,542 @@
       .hero-card .button {
         border-radius: 14px;
       }
+
+      .settings-button {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+      }
+
+      .settings-button:hover,
+      .settings-button:focus-visible {
+        border-color: #c99842;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .settings-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2200;
+        display: grid;
+        place-items: center;
+        padding: 20px;
+        background: rgba(22, 25, 21, 0.48);
+        backdrop-filter: blur(4px);
+      }
+
+      .settings-dialog {
+        width: min(520px, 100%);
+        max-height: min(760px, calc(100vh - 32px));
+        overflow-y: auto;
+        padding: 26px;
+        border: 1px solid #d9c4a2;
+        border-radius: 24px;
+        color: #263126;
+        background: #fffaf1;
+        box-shadow: 0 28px 80px rgba(20, 25, 20, 0.3);
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .settings-dialog-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .settings-dialog h2 {
+        color: #263126;
+        font-size: 1.72rem;
+        letter-spacing: -0.02em;
+      }
+
+      .settings-intro {
+        margin-top: 12px;
+        color: #746b60;
+        font-size: 0.98rem;
+        line-height: 1.55;
+      }
+
+      .settings-close {
+        display: grid;
+        flex: 0 0 auto;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        border: 1px solid #d9c4a2;
+        border-radius: 50%;
+        color: #263126;
+        background: transparent;
+        cursor: pointer;
+        font-size: 1.35rem;
+        line-height: 1;
+      }
+
+      .settings-form {
+        display: grid;
+        gap: 14px;
+        margin-top: 22px;
+      }
+
+      .settings-row {
+        display: grid;
+        grid-template-columns: minmax(145px, 0.8fr) minmax(220px, 1.2fr);
+        align-items: center;
+        gap: 18px;
+      }
+
+      .settings-row label {
+        font-weight: 700;
+        text-align: right;
+      }
+
+      .settings-row select {
+        width: 100%;
+        min-height: 48px;
+        padding: 9px 42px 9px 16px;
+        border: 1px solid #d8c2a1;
+        border-radius: 14px;
+        color: #263126;
+        background: #fffdf8;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .settings-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+        padding-top: 16px;
+        border-top: 1px solid #e2d3bc;
+      }
+
+      .settings-action {
+        min-height: 42px;
+        padding: 9px 15px;
+        border: 1px solid #d5bea0;
+        border-radius: 13px;
+        color: #263126;
+        background: #fffaf1;
+        cursor: pointer;
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 700;
+      }
+
+      .settings-action-primary {
+        border-color: #355c2f;
+        color: #fff;
+        background: #355c2f;
+      }
+
+      .settings-action:hover,
+      .settings-action:focus-visible,
+      .settings-close:hover,
+      .settings-close:focus-visible {
+        border-color: #9b7134;
+      }
+
+      html.ui-text-large body {
+        font-size: 1.08rem;
+      }
+
+      html.ui-title-large .hero-card h1 {
+        font-size: clamp(3rem, 5.4vw, 5rem) !important;
+      }
+
+      html.ui-title-small .hero-card h1 {
+        font-size: clamp(2.35rem, 4.5vw, 4.2rem) !important;
+      }
+
+      html.ui-title-one-line .hero-card h1 {
+        max-width: none !important;
+        white-space: nowrap;
+      }
+
+      html.ui-spacing-comfortable .page-main {
+        gap: 34px;
+      }
+
+      html.ui-spacing-comfortable .content-card {
+        padding: clamp(38px, 5.4vw, 68px);
+      }
+
+      html.ui-font-book body,
+      html.ui-font-book button,
+      html.ui-font-book a,
+      html.ui-font-book select {
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      html.ui-font-sans h1,
+      html.ui-font-sans h2,
+      html.ui-font-sans h3,
+      html.ui-font-sans h4,
+      html.ui-font-sans .brand-copy strong {
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      html.ui-background-plain body {
+        background: var(--sand) !important;
+      }
+
+      html.ui-background-decorative body {
+        background:
+          radial-gradient(circle at 10% 0%, rgba(201, 152, 66, 0.1), transparent 26rem),
+          var(--sand) !important;
+      }
+
+      html.ui-motion-reduced *,
+      html.ui-motion-reduced *::before,
+      html.ui-motion-reduced *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      @media (max-width: 700px) {
+        .settings-button {
+          width: 38px;
+          height: 38px;
+        }
+
+        .settings-dialog {
+          padding: 22px 18px;
+          border-radius: 19px;
+        }
+
+        .settings-row {
+          grid-template-columns: 1fr;
+          gap: 7px;
+        }
+
+        .settings-row label {
+          text-align: left;
+        }
+
+        .settings-actions {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .settings-action {
+          width: 100%;
+        }
+
+        html.ui-title-one-line .hero-card h1 {
+          white-space: normal;
+        }
+      }
     </style>
     <title>Markellos Professional Apps</title>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (() => {
+        const storageKey = 'markellos-interface-settings-v1'
+        const defaults = {
+          colourTheme: 'natural',
+          textSize: 'default',
+          titleSize: 'small',
+          titleLayout: 'one-line',
+          layoutSpacing: 'compact',
+          fontStyle: 'mixed',
+          backgroundDetail: 'plain',
+          motion: 'standard',
+        }
+
+        const copy = {
+          en: {
+            button: 'Interface settings',
+            title: 'Interface settings',
+            intro: 'Adjust the page appearance. Changes are applied when saved.',
+            close: 'Close settings',
+            save: 'Save settings',
+            download: 'Download settings',
+            reset: 'Reset all settings',
+            fields: {
+              colourTheme: 'Colour theme',
+              textSize: 'Text size',
+              titleSize: 'Title size',
+              titleLayout: 'Title layout',
+              layoutSpacing: 'Layout spacing',
+              fontStyle: 'Font style',
+              backgroundDetail: 'Background detail',
+              motion: 'Motion',
+            },
+            options: {
+              natural: 'Natural',
+              dark: 'Dark',
+              default: 'Default',
+              large: 'Large',
+              small: 'Small',
+              'one-line': 'One line',
+              wrapped: 'Wrapped',
+              compact: 'Compact',
+              comfortable: 'Comfortable',
+              mixed: 'Current mix',
+              'book-serif': 'Book serif',
+              'modern-sans': 'Modern sans',
+              plain: 'Plain',
+              decorative: 'Decorative',
+              standard: 'Standard',
+              reduced: 'Reduced',
+            },
+          },
+          el: {
+            button: 'Ρυθμίσεις εμφάνισης',
+            title: 'Ρυθμίσεις εμφάνισης',
+            intro: 'Προσαρμόστε την εμφάνιση της σελίδας. Οι αλλαγές εφαρμόζονται κατά την αποθήκευση.',
+            close: 'Κλείσιμο ρυθμίσεων',
+            save: 'Αποθήκευση ρυθμίσεων',
+            download: 'Λήψη ρυθμίσεων',
+            reset: 'Επαναφορά όλων',
+            fields: {
+              colourTheme: 'Χρωματικό θέμα',
+              textSize: 'Μέγεθος κειμένου',
+              titleSize: 'Μέγεθος τίτλου',
+              titleLayout: 'Διάταξη τίτλου',
+              layoutSpacing: 'Αποστάσεις διάταξης',
+              fontStyle: 'Στυλ γραμματοσειράς',
+              backgroundDetail: 'Λεπτομέρεια φόντου',
+              motion: 'Κίνηση',
+            },
+            options: {
+              natural: 'Φυσικό',
+              dark: 'Σκοτεινό',
+              default: 'Προεπιλογή',
+              large: 'Μεγάλο',
+              small: 'Μικρό',
+              'one-line': 'Μία γραμμή',
+              wrapped: 'Αναδίπλωση',
+              compact: 'Συμπαγές',
+              comfortable: 'Άνετο',
+              mixed: 'Τρέχων συνδυασμός',
+              'book-serif': 'Κλασική serif',
+              'modern-sans': 'Σύγχρονη sans',
+              plain: 'Απλό',
+              decorative: 'Διακοσμητικό',
+              standard: 'Κανονική',
+              reduced: 'Περιορισμένη',
+            },
+          },
+        }
+
+        const fields = [
+          ['colourTheme', ['natural', 'dark']],
+          ['textSize', ['default', 'large']],
+          ['titleSize', ['small', 'large']],
+          ['titleLayout', ['one-line', 'wrapped']],
+          ['layoutSpacing', ['compact', 'comfortable']],
+          ['fontStyle', ['mixed', 'book-serif', 'modern-sans']],
+          ['backgroundDetail', ['plain', 'decorative']],
+          ['motion', ['standard', 'reduced']],
+        ]
+
+        const loadSettings = () => {
+          try {
+            const stored = JSON.parse(localStorage.getItem(storageKey) || '{}')
+            return { ...defaults, ...stored }
+          } catch {
+            return { ...defaults }
+          }
+        }
+
+        let savedSettings = loadSettings()
+
+        const removeInterfaceClasses = () => {
+          const root = document.documentElement
+          ;[
+            'ui-text-large',
+            'ui-title-small',
+            'ui-title-large',
+            'ui-title-one-line',
+            'ui-spacing-comfortable',
+            'ui-font-book',
+            'ui-font-sans',
+            'ui-background-plain',
+            'ui-background-decorative',
+            'ui-motion-reduced',
+          ].forEach((className) => root.classList.remove(className))
+        }
+
+        const applySettings = (settings, synchroniseTheme = true) => {
+          const root = document.documentElement
+          removeInterfaceClasses()
+
+          if (settings.textSize === 'large') root.classList.add('ui-text-large')
+          root.classList.add(settings.titleSize === 'large' ? 'ui-title-large' : 'ui-title-small')
+          if (settings.titleLayout === 'one-line') root.classList.add('ui-title-one-line')
+          if (settings.layoutSpacing === 'comfortable') root.classList.add('ui-spacing-comfortable')
+          if (settings.fontStyle === 'book-serif') root.classList.add('ui-font-book')
+          if (settings.fontStyle === 'modern-sans') root.classList.add('ui-font-sans')
+          root.classList.add(
+            settings.backgroundDetail === 'decorative'
+              ? 'ui-background-decorative'
+              : 'ui-background-plain',
+          )
+          if (settings.motion === 'reduced') root.classList.add('ui-motion-reduced')
+
+          if (synchroniseTheme) {
+            const desiredTheme = settings.colourTheme === 'dark' ? 'dark' : 'light'
+            const currentTheme = root.dataset.theme || 'light'
+            const themeButton = document.querySelector('.theme-button')
+            if (themeButton && currentTheme !== desiredTheme) {
+              themeButton.click()
+            } else {
+              root.dataset.theme = desiredTheme
+            }
+          }
+        }
+
+        const language = () => document.documentElement.lang === 'el' ? 'el' : 'en'
+
+        const downloadSettings = (settings) => {
+          const blob = new Blob(
+            [JSON.stringify({ version: 1, settings }, null, 2)],
+            { type: 'application/json' },
+          )
+          const url = URL.createObjectURL(blob)
+          const link = document.createElement('a')
+          link.href = url
+          link.download = 'markellos-interface-settings.json'
+          document.body.appendChild(link)
+          link.click()
+          link.remove()
+          URL.revokeObjectURL(url)
+        }
+
+        const openSettings = () => {
+          const lang = language()
+          const text = copy[lang]
+          let draft = {
+            ...savedSettings,
+            colourTheme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'natural',
+          }
+
+          const overlay = document.createElement('div')
+          overlay.className = 'settings-overlay'
+          overlay.innerHTML = `
+            <section class="settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+              <div class="settings-dialog-header">
+                <div>
+                  <h2 id="settings-title">${text.title}</h2>
+                  <p class="settings-intro">${text.intro}</p>
+                </div>
+                <button class="settings-close" type="button" aria-label="${text.close}" title="${text.close}">×</button>
+              </div>
+              <form class="settings-form">
+                ${fields.map(([key, values]) => `
+                  <div class="settings-row">
+                    <label for="setting-${key}">${text.fields[key]}</label>
+                    <select id="setting-${key}" name="${key}">
+                      ${values.map((value) => `
+                        <option value="${value}" ${draft[key] === value ? 'selected' : ''}>
+                          ${text.options[value]}
+                        </option>
+                      `).join('')}
+                    </select>
+                  </div>
+                `).join('')}
+              </form>
+              <div class="settings-actions">
+                <button class="settings-action settings-action-primary" type="button" data-action="save">${text.save}</button>
+                <button class="settings-action" type="button" data-action="download">${text.download}</button>
+                <button class="settings-action" type="button" data-action="reset">${text.reset}</button>
+              </div>
+            </section>
+          `
+
+          const close = () => {
+            overlay.remove()
+            document.body.style.overflow = ''
+            window.removeEventListener('keydown', handleKeyDown)
+          }
+
+          const handleKeyDown = (event) => {
+            if (event.key === 'Escape') close()
+          }
+
+          overlay.addEventListener('mousedown', (event) => {
+            if (event.target === overlay) close()
+          })
+
+          overlay.querySelector('.settings-close').addEventListener('click', close)
+
+          overlay.querySelectorAll('select').forEach((select) => {
+            select.addEventListener('change', () => {
+              draft = { ...draft, [select.name]: select.value }
+            })
+          })
+
+          overlay.querySelector('[data-action="save"]').addEventListener('click', () => {
+            savedSettings = { ...draft }
+            localStorage.setItem(storageKey, JSON.stringify(savedSettings))
+            applySettings(savedSettings)
+            close()
+          })
+
+          overlay.querySelector('[data-action="download"]').addEventListener('click', () => {
+            downloadSettings(draft)
+          })
+
+          overlay.querySelector('[data-action="reset"]').addEventListener('click', () => {
+            savedSettings = { ...defaults }
+            draft = { ...defaults }
+            localStorage.removeItem(storageKey)
+            overlay.querySelectorAll('select').forEach((select) => {
+              select.value = draft[select.name]
+            })
+            applySettings(savedSettings)
+          })
+
+          document.body.appendChild(overlay)
+          document.body.style.overflow = 'hidden'
+          window.addEventListener('keydown', handleKeyDown)
+          overlay.querySelector('select').focus()
+        }
+
+        const mountSettingsButton = () => {
+          if (document.querySelector('.settings-button')) return
+          const actions = document.querySelector('.header-actions')
+          if (!actions) {
+            window.requestAnimationFrame(mountSettingsButton)
+            return
+          }
+
+          const lang = language()
+          const button = document.createElement('button')
+          button.className = 'settings-button'
+          button.type = 'button'
+          button.setAttribute('aria-label', copy[lang].button)
+          button.title = copy[lang].button
+          button.innerHTML = '<span aria-hidden="true">⚙</span>'
+          button.addEventListener('click', openSettings)
+          actions.insertBefore(button, actions.firstChild)
+
+          const observer = new MutationObserver(() => {
+            const currentLang = language()
+            button.setAttribute('aria-label', copy[currentLang].button)
+            button.title = copy[currentLang].button
+          })
+          observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
+
+          applySettings(savedSettings)
+        }
+
+        window.addEventListener('load', mountSettingsButton)
+      })()
+    </script>
   </body>
 </html>
