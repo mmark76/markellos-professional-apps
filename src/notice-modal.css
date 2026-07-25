@@ -111,6 +111,21 @@
   border-color: rgba(255, 255, 255, 0.22);
 }
 
+/* Keep the main portfolio title on one line and add its professional context. */
+.hero-card h1 {
+  max-width: none;
+  font-size: clamp(2.2rem, 4.6vw, 4.5rem);
+  white-space: nowrap;
+}
+
+html[lang="en"] .hero-card h1::before {
+  content: "Professional ";
+}
+
+html[lang="el"] .hero-card h1::before {
+  content: "Επαγγελματικά ";
+}
+
 @media (max-width: 700px) {
   .footer-notice-button {
     padding: 0 5px;
@@ -137,5 +152,10 @@
 
   .notice-dialog p {
     font-size: 0.92rem;
+  }
+
+  .hero-card h1 {
+    font-size: clamp(0.92rem, 4.45vw, 1.85rem);
+    letter-spacing: -0.035em;
   }
 }
