@@ -1,0 +1,53 @@
+.main-nav button,
+.footer-links button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.main-nav button {
+  position: relative;
+  padding: 34px 0 31px;
+  color: #d4dce7;
+  font-size: 0.79rem;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+}
+
+.main-nav button::after {
+  position: absolute;
+  right: 0;
+  bottom: 17px;
+  left: 0;
+  height: 2px;
+  background: var(--gold);
+  content: "";
+  transform: scaleX(0);
+  transition: transform 160ms ease;
+}
+
+.main-nav button:hover,
+.main-nav button:focus-visible {
+  color: #fff;
+}
+
+.main-nav button:hover::after,
+.main-nav button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.footer-links button {
+  justify-self: start;
+  color: #e1e7ef;
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.footer-links button:hover,
+.footer-links button:focus-visible {
+  color: var(--gold);
+}
