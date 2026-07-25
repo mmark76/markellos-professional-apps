@@ -13,8 +13,8 @@ function App() {
 
   const page = language === 'en'
     ? {
-        brand: 'Markellos Projects',
-        subtitle: 'Project Portfolio',
+        brand: 'Markellos Professional Projects',
+        subtitle: 'Professional Projects Portfolio',
         navLabel: 'Primary navigation',
         nav: {
           home: 'HOME',
@@ -26,7 +26,7 @@ function App() {
         languageCode: 'EL',
         languageLabel: 'Ελληνικά',
         themeLabel: darkMode ? 'Use light theme' : 'Use dark theme',
-        eyebrow: 'PROJECT PORTFOLIO',
+        eyebrow: 'PROFESSIONAL PROJECTS PORTFOLIO',
         title: 'Projects and applications.',
         lead:
           'A collection of digital tools I have designed and developed around practical ideas, recurring tasks and real needs.',
@@ -64,8 +64,8 @@ function App() {
         copyright: 'All rights reserved.',
       }
     : {
-        brand: 'Markellos Projects',
-        subtitle: 'Portfolio Έργων',
+        brand: 'Markellos Professional Projects',
+        subtitle: 'Professional Projects Portfolio',
         navLabel: 'Κύρια πλοήγηση',
         nav: {
           home: 'ΑΡΧΙΚΗ',
@@ -77,7 +77,7 @@ function App() {
         languageCode: 'EN',
         languageLabel: 'English',
         themeLabel: darkMode ? 'Χρήση φωτεινού θέματος' : 'Χρήση σκοτεινού θέματος',
-        eyebrow: 'PORTFOLIO ΕΡΓΩΝ',
+        eyebrow: 'PROFESSIONAL PROJECTS PORTFOLIO',
         title: 'Έργα και εφαρμογές.',
         lead:
           'Μια συλλογή ψηφιακών εργαλείων που έχω σχεδιάσει και αναπτύξει με αφετηρία πρακτικές ιδέες, επαναλαμβανόμενες εργασίες και πραγματικές ανάγκες.',
@@ -119,8 +119,8 @@ function App() {
     document.documentElement.lang = language
     document.documentElement.dataset.theme = darkMode ? 'dark' : 'light'
     document.title = language === 'en'
-      ? 'Markellos Projects'
-      : 'Markellos Projects — Έργα και εφαρμογές'
+      ? 'Professional Projects Portfolio'
+      : 'Professional Projects Portfolio — Έργα και εφαρμογές'
   }, [language, darkMode])
 
   useEffect(() => {
@@ -309,7 +309,7 @@ function App() {
 
         <div className="container footer-bottom">
           <span>© {new Date().getFullYear()} Markellos Markides. {page.copyright}</span>
-          <span>markellosecosystem.com</span>
+          <span>professional.markellosecosystem.com</span>
         </div>
       </footer>
 
