@@ -11,6 +11,7 @@ type Project = {
   technologies: string[]
   safeguards: string
   status: string
+  url?: string
 }
 
 type PortfolioContent = {
@@ -107,7 +108,7 @@ export const content: Record<Language, PortfolioContent> = {
       facts: [
         { value: '20+', label: 'years of professional experience' },
         { value: 'MBA', label: 'management and strategic perspective' },
-        { value: '3', label: 'selected professional applications' },
+        { value: '4', label: 'selected professional applications' },
       ],
     },
     expertise: {
@@ -189,6 +190,24 @@ export const content: Record<Language, PortfolioContent> = {
             'It is intended only as a personal aid. Final information must always be checked through the organisation’s approved procedures.',
           status: 'Private application currently being checked for desktop use.',
         },
+        {
+          id: 'ntt-certification',
+          eyebrow: 'Certification preparation and technical learning',
+          title: 'Network & Telecommunications Technician Certification',
+          summary:
+            'A structured study application for preparing for the EOPPEP Network and Telecommunications Technician certification examinations.',
+          problem:
+            'Certification preparation covers a broad technical syllabus and can become fragmented across notes, theory, exercises and practice questions.',
+          solution:
+            'It organises the syllabus into clear modules and combines concise theory, active-recall questions, practical labs, quizzes and local progress tracking.',
+          contribution:
+            'I designed the learning structure, organised the curriculum and developed the public application as an independent study aid.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'YAML curriculum', 'Local storage', 'GitHub Pages'],
+          safeguards:
+            'The application is an independent educational aid, not official EOPPEP material. The syllabus mapping is still being verified and should be used alongside current official sources.',
+          status: 'Public pilot / early-access version with 1 of 16 modules currently available.',
+          url: 'https://ntt-certification.markellosecosystem.com/',
+        },
       ],
     },
     approach: {
@@ -263,7 +282,7 @@ export const content: Record<Language, PortfolioContent> = {
       facts: [
         { value: '20+', label: 'χρόνια επαγγελματικής εμπειρίας' },
         { value: 'MBA', label: 'διοικητική και στρατηγική οπτική' },
-        { value: '3', label: 'επιλεγμένες επαγγελματικές εφαρμογές' },
+        { value: '4', label: 'επιλεγμένες επαγγελματικές εφαρμογές' },
       ],
     },
     expertise: {
@@ -344,6 +363,24 @@ export const content: Record<Language, PortfolioContent> = {
           safeguards:
             'Προορίζεται μόνο ως προσωπικό βοηθητικό εργαλείο. Οι τελικές πληροφορίες πρέπει πάντοτε να ελέγχονται μέσω των εγκεκριμένων διαδικασιών του οργανισμού.',
           status: 'Ιδιωτική εφαρμογή που βρίσκεται σε έλεγχο για χρήση σε υπολογιστή.',
+        },
+        {
+          id: 'ntt-certification',
+          eyebrow: 'Προετοιμασία πιστοποίησης και τεχνική μάθηση',
+          title: 'Πιστοποίηση Τεχνικού Δικτύων και Τηλεπικοινωνιών',
+          summary:
+            'Δομημένη εκπαιδευτική εφαρμογή για προετοιμασία στις εξετάσεις πιστοποίησης ΕΟΠΠΕΠ της ειδικότητας Τεχνικός Δικτύων και Τηλεπικοινωνιών.',
+          problem:
+            'Η προετοιμασία καλύπτει ευρύ τεχνικό αντικείμενο και μπορεί να κατακερματιστεί σε σημειώσεις, θεωρία, ασκήσεις και ερωτήσεις εξάσκησης.',
+          solution:
+            'Οργανώνει την ύλη σε σαφείς ενότητες και συνδυάζει σύντομη θεωρία, ερωτήσεις ενεργητικής ανάκλησης, πρακτικά εργαστήρια, quiz και τοπική παρακολούθηση προόδου.',
+          contribution:
+            'Σχεδίασα τη μαθησιακή δομή, οργάνωσα το πρόγραμμα ύλης και ανέπτυξα τη δημόσια εφαρμογή ως ανεξάρτητο βοήθημα μελέτης.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Δομημένη ύλη YAML', 'Τοπική αποθήκευση', 'GitHub Pages'],
+          safeguards:
+            'Η εφαρμογή είναι ανεξάρτητο εκπαιδευτικό βοήθημα και όχι επίσημο υλικό του ΕΟΠΠΕΠ. Η αντιστοίχιση της ύλης εξακολουθεί να επαληθεύεται και πρέπει να χρησιμοποιείται μαζί με τις ισχύουσες επίσημες πηγές.',
+          status: 'Δημόσια πιλοτική έκδοση / early access με διαθέσιμη 1 από 16 ενότητες.',
+          url: 'https://ntt-certification.markellosecosystem.com/',
         },
       ],
     },
