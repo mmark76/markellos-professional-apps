@@ -33,6 +33,7 @@ function App() {
           'Some projects are private or service-related and are presented only through general, anonymised descriptions.',
         viewProjects: 'View projects',
         visitEcosystem: 'Visit Markellos Ecosystem',
+        visitProject: 'Visit application',
         projectsEyebrow: 'SELECTED PROJECTS',
         projectsTitle: 'Selected professional applications.',
         projectsIntro:
@@ -75,6 +76,7 @@ function App() {
           'Ορισμένα έργα είναι ιδιωτικά ή υπηρεσιακής φύσης και παρουσιάζονται μόνο μέσα από γενικές, ανωνυμοποιημένες περιγραφές.',
         viewProjects: 'Προβολή έργων',
         visitEcosystem: 'Markellos Ecosystem',
+        visitProject: 'Άνοιγμα εφαρμογής',
         projectsEyebrow: 'ΕΠΙΛΕΓΜΕΝΑ ΕΡΓΑ',
         projectsTitle: 'Επιλεγμένες επαγγελματικές εφαρμογές.',
         projectsIntro:
@@ -196,6 +198,14 @@ function App() {
                   <p className="project-eyebrow">{project.eyebrow}</p>
                   <h3>{project.title}</h3>
                   <p className="project-summary">{project.summary}</p>
+
+                  {project.url && (
+                    <div className="button-row">
+                      <a className="button button-secondary" href={project.url} target="_blank" rel="noreferrer">
+                        {page.visitProject}
+                      </a>
+                    </div>
+                  )}
 
                   <details>
                     <summary>{page.details}</summary>
