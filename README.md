@@ -13,8 +13,9 @@ This repository contains the public portfolio website only. It does **not** cont
 - Health & Safety Management Application
 - Electronic Treasury Workflow
 - Monthly Service Roster Tool
+- Network & Telecommunications Technician Certification
 
-All project descriptions are intentionally generalised and use demonstration-oriented wording.
+All project descriptions are intentionally generalised and use demonstration-oriented wording. Public projects may link to their separate published applications.
 
 ## Technology
 
