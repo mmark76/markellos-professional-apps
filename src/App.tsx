@@ -41,6 +41,7 @@ function App() {
         details: 'Project details',
         technology: 'Technology',
         status: 'Stage of development',
+        nttStatus: 'Public pilot / early-access version with 1 of 24 modules currently available.',
         processEyebrow: 'PROJECT PROCESS',
         processTitle: 'How the projects are developed.',
         noticeTitle: 'Important note',
@@ -84,6 +85,7 @@ function App() {
         details: 'Λεπτομέρειες έργου',
         technology: 'Τεχνολογία',
         status: 'Στάδιο ανάπτυξης',
+        nttStatus: 'Δημόσια πιλοτική έκδοση / early access με διαθέσιμη 1 από 24 ενότητες.',
         processEyebrow: 'ΔΙΑΔΙΚΑΣΙΑ ΕΡΓΟΥ',
         processTitle: 'Πώς αναπτύσσονται τα έργα.',
         noticeTitle: 'Σημαντική σημείωση',
@@ -226,7 +228,7 @@ function App() {
                     </div>
                     <div>
                       <span>{page.status}</span>
-                      <p>{project.status}</p>
+                      <p>{project.id === 'ntt-certification' ? page.nttStatus : project.status}</p>
                     </div>
                   </div>
                 </div>
