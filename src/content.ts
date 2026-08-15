@@ -205,7 +205,7 @@ export const content: Record<Language, PortfolioContent> = {
           technologies: ['HTML', 'CSS', 'JavaScript', 'YAML curriculum', 'Local storage', 'GitHub Pages'],
           safeguards:
             'The application is an independent educational aid, not official EOPPEP material. The syllabus mapping is still being verified and should be used alongside current official sources.',
-          status: 'Public pilot / early-access version with 1 of 16 modules currently available.',
+          status: 'Public pilot / early-access version with 1 of 24 modules currently available.',
           url: 'https://ntt-certification.markellosecosystem.com/',
         },
       ],
@@ -379,7 +379,7 @@ export const content: Record<Language, PortfolioContent> = {
           technologies: ['HTML', 'CSS', 'JavaScript', 'Δομημένη ύλη YAML', 'Τοπική αποθήκευση', 'GitHub Pages'],
           safeguards:
             'Η εφαρμογή είναι ανεξάρτητο εκπαιδευτικό βοήθημα και όχι επίσημο υλικό του ΕΟΠΠΕΠ. Η αντιστοίχιση της ύλης εξακολουθεί να επαληθεύεται και πρέπει να χρησιμοποιείται μαζί με τις ισχύουσες επίσημες πηγές.',
-          status: 'Δημόσια πιλοτική έκδοση / early access με διαθέσιμη 1 από 16 ενότητες.',
+          status: 'Δημόσια πιλοτική έκδοση / early access με διαθέσιμη 1 από 24 ενότητες.',
           url: 'https://ntt-certification.markellosecosystem.com/',
         },
       ],
