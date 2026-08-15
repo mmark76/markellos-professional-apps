@@ -199,7 +199,7 @@ function App() {
                   <h3>{project.title}</h3>
                   <p className="project-summary">{project.summary}</p>
 
-                  {project.url && (
+                  {project.url && project.id !== 'ntt-certification' && (
                     <div className="button-row">
                       <a className="button button-secondary" href={project.url} target="_blank" rel="noreferrer">
                         {page.visitProject}
