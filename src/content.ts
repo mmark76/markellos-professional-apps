@@ -108,7 +108,7 @@ export const content: Record<Language, PortfolioContent> = {
       facts: [
         { value: '20+', label: 'years of professional experience' },
         { value: 'MBA', label: 'management and strategic perspective' },
-        { value: '4', label: 'selected professional applications' },
+        { value: '5', label: 'selected professional applications' },
       ],
     },
     expertise: {
@@ -208,6 +208,24 @@ export const content: Record<Language, PortfolioContent> = {
           status: 'Public pilot / early-access version with 1 of 24 modules currently available.',
           url: 'https://ntt-certification.markellosecosystem.com/',
         },
+        {
+          id: 'pmp-practice',
+          eyebrow: 'Project management learning and reference',
+          title: 'PMP / PMBOK Practice Dashboard',
+          summary:
+            'A structured reference dashboard for predictive project management concepts and PMP practice.',
+          problem:
+            'Core project management concepts can become fragmented across process groups, knowledge areas, processes, formulas, documents and study notes.',
+          solution:
+            'It brings together the Triple Constraint, 5 Process Groups, 10 Knowledge Areas, 49 processes, key documents, EVM, risk management, tools and roles in one navigable reference.',
+          contribution:
+            'I defined the reference structure and content from practical project-management experience and study needs, and developed it as a clear learning dashboard.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive UI', 'Local appearance settings'],
+          safeguards:
+            'The dashboard is an independent study and reference aid. It does not replace current PMI standards, official PMP examination resources or professional judgement.',
+          status: 'Dashboard prepared for publication at its canonical Markellos Ecosystem hostname.',
+          url: 'https://pmp-practice.markellosecosystem.com/',
+        },
       ],
     },
     approach: {
@@ -282,7 +300,7 @@ export const content: Record<Language, PortfolioContent> = {
       facts: [
         { value: '20+', label: 'χρόνια επαγγελματικής εμπειρίας' },
         { value: 'MBA', label: 'διοικητική και στρατηγική οπτική' },
-        { value: '4', label: 'επιλεγμένες επαγγελματικές εφαρμογές' },
+        { value: '5', label: 'επιλεγμένες επαγγελματικές εφαρμογές' },
       ],
     },
     expertise: {
@@ -381,6 +399,24 @@ export const content: Record<Language, PortfolioContent> = {
             'Η εφαρμογή είναι ανεξάρτητο εκπαιδευτικό βοήθημα και όχι επίσημο υλικό του ΕΟΠΠΕΠ. Η αντιστοίχιση της ύλης εξακολουθεί να επαληθεύεται και πρέπει να χρησιμοποιείται μαζί με τις ισχύουσες επίσημες πηγές.',
           status: 'Δημόσια πιλοτική έκδοση / early access με διαθέσιμη 1 από 24 ενότητες.',
           url: 'https://ntt-certification.markellosecosystem.com/',
+        },
+        {
+          id: 'pmp-practice',
+          eyebrow: 'Μάθηση και αναφορά στη διαχείριση έργων',
+          title: 'PMP / PMBOK Practice Dashboard',
+          summary:
+            'Δομημένο dashboard αναφοράς για έννοιες predictive project management και εξάσκηση PMP.',
+          problem:
+            'Οι βασικές έννοιες της διαχείρισης έργων μπορούν να κατακερματιστούν σε ομάδες διαδικασιών, περιοχές γνώσης, διαδικασίες, τύπους, έγγραφα και σημειώσεις μελέτης.',
+          solution:
+            'Συγκεντρώνει σε ένα πλοηγήσιμο reference την Triple Constraint, τις 5 Process Groups, τις 10 Knowledge Areas, τις 49 processes, βασικά έγγραφα, EVM, risk management, εργαλεία και ρόλους.',
+          contribution:
+            'Καθόρισα τη δομή και το περιεχόμενο αναφοράς με βάση την πρακτική εμπειρία στη διαχείριση έργων και τις ανάγκες μελέτης και το ανέπτυξα ως σαφές learning dashboard.',
+          technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive UI', 'Τοπικές ρυθμίσεις εμφάνισης'],
+          safeguards:
+            'Το dashboard είναι ανεξάρτητο βοήθημα μελέτης και αναφοράς. Δεν αντικαθιστά τα ισχύοντα πρότυπα του PMI, το επίσημο υλικό εξετάσεων PMP ή την επαγγελματική κρίση.',
+          status: 'Το dashboard είναι έτοιμο για δημοσίευση στο canonical hostname του Markellos Ecosystem.',
+          url: 'https://pmp-practice.markellosecosystem.com/',
         },
       ],
     },
