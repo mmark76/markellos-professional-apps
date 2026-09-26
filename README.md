@@ -25,6 +25,12 @@ All project descriptions are intentionally generalised and use demonstration-ori
 - Plain CSS with responsive and accessible components
 - Greek and English content without an external i18n dependency
 
+## Analytics
+
+The public portfolio uses Google Analytics 4 with the shared Markellos Ecosystem Measurement ID `G-DK5WN8TH3Z`. Traffic remains separable by the `Host name` dimension as `professional.markellosecosystem.com`.
+
+Google Consent Mode defaults analytics and advertising storage to denied. Visitors can choose necessary-only storage or explicitly allow analytics. Advertising signals and ad personalization remain disabled, and the footer provides a control for changing the analytics choice.
+
 ## Local development
 
 ```bash
