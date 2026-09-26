@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { content, type Language } from './content'
+import { AnalyticsConsentBanner } from './features/analytics/AnalyticsConsentBanner'
 import './styles.css'
 import './notice-modal.css'
 
@@ -9,6 +10,7 @@ function App() {
   const [language, setLanguage] = useState<Language>('en')
   const [darkMode, setDarkMode] = useState(false)
   const [noticeOpen, setNoticeOpen] = useState(false)
+  const [analyticsPreferencesOpen, setAnalyticsPreferencesOpen] = useState(false)
   const copy = content[language]
 
   const page = language === 'en'
@@ -51,6 +53,7 @@ function App() {
           'This is not an official website of any public authority, does not represent an employer and does not offer commercial or official services.',
         ],
         closeNotice: 'Close',
+        analyticsChoices: 'Analytics choices',
         cv: 'Public CV',
         footerText:
           'A personal portfolio of selected projects and applications, presented with privacy and confidentiality in mind.',
@@ -95,6 +98,7 @@ function App() {
           'Δεν είναι επίσημη ιστοσελίδα δημόσιας αρχής, δεν εκπροσωπεί εργοδότη και δεν παρέχει εμπορικές ή επίσημες υπηρεσίες.',
         ],
         closeNotice: 'Κλείσιμο',
+        analyticsChoices: 'Ρυθμίσεις analytics',
         cv: 'Δημόσιο CV',
         footerText:
           'Προσωπικό portfolio επιλεγμένων έργων και εφαρμογών, με σεβασμό στην ιδιωτικότητα και την εμπιστευτικότητα.',
@@ -276,9 +280,18 @@ function App() {
             <a href="mailto:markellos.markides@gmail.com" aria-label="Email">@</a>
           </div>
 
-          <button className="footer-notice-button" type="button" onClick={() => setNoticeOpen(true)}>
-            {page.noticeTitle}
-          </button>
+          <div className="footer-meta-actions">
+            <button className="footer-notice-button" type="button" onClick={() => setNoticeOpen(true)}>
+              {page.noticeTitle}
+            </button>
+            <button
+              className="footer-notice-button"
+              type="button"
+              onClick={() => setAnalyticsPreferencesOpen(true)}
+            >
+              {page.analyticsChoices}
+            </button>
+          </div>
         </div>
 
         <div className="container footer-bottom">
@@ -286,6 +299,12 @@ function App() {
           <span>professional.markellosecosystem.com</span>
         </div>
       </footer>
+
+      <AnalyticsConsentBanner
+        language={language}
+        open={analyticsPreferencesOpen}
+        onClose={() => setAnalyticsPreferencesOpen(false)}
+      />
 
       {noticeOpen && (
         <div className="notice-overlay" role="presentation" onMouseDown={() => setNoticeOpen(false)}>
