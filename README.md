@@ -27,9 +27,10 @@ All project descriptions are intentionally generalised and use demonstration-ori
 
 ## Analytics
 
-The public portfolio uses Google Analytics 4 with the shared Markellos Ecosystem Measurement ID `G-DK5WN8TH3Z`. Traffic remains separable by the `Host name` dimension as `professional.markellosecosystem.com`.
-
-Google Consent Mode defaults analytics and advertising storage to denied. Visitors can choose necessary-only storage or explicitly allow analytics. Advertising signals and ad personalization remain disabled, and the footer provides a control for changing the analytics choice.
+The public portfolio uses the Markellos Ecosystem cookie-less aggregate collector only on the exact
+HTTPS production hostname, `professional.markellosecosystem.com`. It records only aggregate visits
+by UTC hour, domain, and country so the administrator can understand overall traffic. It does not
+use analytics cookies, visitor identifiers, paths, referrers, device details, or events.
 
 ## Local development
 

@@ -1,5 +1,5 @@
 :root {
-  --footer-height: 58px;
+  --footer-height: 90px;
 }
 
 .hero-card h1 {
@@ -30,9 +30,11 @@
 .footer-bottom {
   order: 1;
   display: flex;
-  min-height: 23px;
+  min-height: 55px;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 2px;
   border: 0;
   color: #4a4338;
   font-family: Georgia, "Times New Roman", serif;
@@ -42,6 +44,20 @@
 
 .footer-bottom span:last-child {
   display: none;
+}
+
+.footer-analytics-information {
+  max-width: 1120px;
+  color: #6b6255;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 0.58rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.footer-meta-actions {
+  display: flex;
+  align-items: center;
 }
 
 .footer-top {
@@ -128,7 +144,7 @@
 
 @media (max-width: 700px) {
   :root {
-    --footer-height: 76px;
+    --footer-height: 126px;
   }
 
   .hero-card h1 {
@@ -137,13 +153,13 @@
   }
 
   .footer-bottom {
-    min-height: 27px;
+    min-height: 78px;
     padding: 0 8px;
     font-size: 0.61rem;
   }
 
   .footer-top {
-    min-height: 49px;
+    min-height: 48px;
     flex-wrap: wrap;
     align-content: flex-start;
     padding: 1px 6px 16px;
@@ -165,5 +181,11 @@
     right: 6px;
     bottom: 1px;
     font-size: 0.52rem;
+  }
+
+  .footer-analytics-information {
+    max-width: 560px;
+    font-size: 0.52rem;
+    line-height: 1.3;
   }
 }
