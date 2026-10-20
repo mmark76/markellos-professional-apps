@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { content, type Language } from './content'
-import { AnalyticsConsentBanner } from './features/analytics/AnalyticsConsentBanner'
 import './styles.css'
 import './notice-modal.css'
 
@@ -10,7 +9,6 @@ function App() {
   const [language, setLanguage] = useState<Language>('en')
   const [darkMode, setDarkMode] = useState(false)
   const [noticeOpen, setNoticeOpen] = useState(false)
-  const [analyticsPreferencesOpen, setAnalyticsPreferencesOpen] = useState(false)
   const copy = content[language]
 
   const page = language === 'en'
@@ -53,7 +51,8 @@ function App() {
           'This is not an official website of any public authority, does not represent an employer and does not offer commercial or official services.',
         ],
         closeNotice: 'Close',
-        analyticsChoices: 'Analytics choices',
+        analyticsInformation:
+          'No analytics cookies are used. Aggregate visits by UTC hour, domain and country are recorded only to help the administrator understand overall traffic; no visitor identifiers, paths, referrers, device details or events are used.',
         cv: 'Public CV',
         footerText:
           'A personal portfolio of selected projects and applications, presented with privacy and confidentiality in mind.',
@@ -98,7 +97,8 @@ function App() {
           'Δεν είναι επίσημη ιστοσελίδα δημόσιας αρχής, δεν εκπροσωπεί εργοδότη και δεν παρέχει εμπορικές ή επίσημες υπηρεσίες.',
         ],
         closeNotice: 'Κλείσιμο',
-        analyticsChoices: 'Ρυθμίσεις analytics',
+        analyticsInformation:
+          'Δεν χρησιμοποιούνται cookies analytics. Συγκεντρωτικές επισκέψεις ανά ώρα UTC, domain και χώρα καταγράφονται μόνο για να κατανοεί ο διαχειριστής τη συνολική επισκεψιμότητα· δεν χρησιμοποιούνται αναγνωριστικά επισκεπτών, διαδρομές, παραπομπές, στοιχεία συσκευής ή συμβάντα.',
         cv: 'Δημόσιο CV',
         footerText:
           'Προσωπικό portfolio επιλεγμένων έργων και εφαρμογών, με σεβασμό στην ιδιωτικότητα και την εμπιστευτικότητα.',
@@ -284,27 +284,15 @@ function App() {
             <button className="footer-notice-button" type="button" onClick={() => setNoticeOpen(true)}>
               {page.noticeTitle}
             </button>
-            <button
-              className="footer-notice-button"
-              type="button"
-              onClick={() => setAnalyticsPreferencesOpen(true)}
-            >
-              {page.analyticsChoices}
-            </button>
           </div>
         </div>
 
         <div className="container footer-bottom">
           <span>© {new Date().getFullYear()} Markellos Markides. {page.copyright}</span>
+          <p className="footer-analytics-information">{page.analyticsInformation}</p>
           <span>professional.markellosecosystem.com</span>
         </div>
       </footer>
-
-      <AnalyticsConsentBanner
-        language={language}
-        open={analyticsPreferencesOpen}
-        onClose={() => setAnalyticsPreferencesOpen(false)}
-      />
 
       {noticeOpen && (
         <div className="notice-overlay" role="presentation" onMouseDown={() => setNoticeOpen(false)}>
