@@ -9,6 +9,7 @@ function App() {
   const [language, setLanguage] = useState<Language>('en')
   const [darkMode, setDarkMode] = useState(false)
   const [noticeOpen, setNoticeOpen] = useState(false)
+  const [analyticsNoticeOpen, setAnalyticsNoticeOpen] = useState(false)
   const copy = content[language]
 
   const page = language === 'en'
@@ -53,6 +54,8 @@ function App() {
         closeNotice: 'Close',
         analyticsInformation:
           'No analytics cookies are used. Aggregate visits by UTC hour, domain and country are recorded only to help the administrator understand overall traffic; no visitor identifiers, paths, referrers, device details or events are used.',
+        analyticsTitle: 'Cookie-less analytics information',
+        closeAnalytics: 'Close analytics information',
         cv: 'Public CV',
         footerText:
           'A personal portfolio of selected projects and applications, presented with privacy and confidentiality in mind.',
@@ -99,6 +102,8 @@ function App() {
         closeNotice: 'Κλείσιμο',
         analyticsInformation:
           'Δεν χρησιμοποιούνται cookies analytics. Συγκεντρωτικές επισκέψεις ανά ώρα UTC, domain και χώρα καταγράφονται μόνο για να κατανοεί ο διαχειριστής τη συνολική επισκεψιμότητα· δεν χρησιμοποιούνται αναγνωριστικά επισκεπτών, διαδρομές, παραπομπές, στοιχεία συσκευής ή συμβάντα.',
+        analyticsTitle: 'Πληροφορίες cookie-less analytics',
+        closeAnalytics: 'Κλείσιμο πληροφοριών analytics',
         cv: 'Δημόσιο CV',
         footerText:
           'Προσωπικό portfolio επιλεγμένων έργων και εφαρμογών, με σεβασμό στην ιδιωτικότητα και την εμπιστευτικότητα.',
@@ -129,6 +134,25 @@ function App() {
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [noticeOpen])
+
+  useEffect(() => {
+    try {
+      if (window.localStorage.getItem('professional-apps.analytics-notice-dismissed') === 'true') return
+    } catch {
+      // Show the informational notice when local storage is unavailable.
+    }
+    const frame = window.requestAnimationFrame(() => setAnalyticsNoticeOpen(true))
+    return () => window.cancelAnimationFrame(frame)
+  }, [])
+
+  const closeAnalyticsNotice = () => {
+    try {
+      window.localStorage.setItem('professional-apps.analytics-notice-dismissed', 'true')
+    } catch {
+      // Closing still works for this visit.
+    }
+    setAnalyticsNoticeOpen(false)
+  }
 
   const toggleLanguage = () => {
     setLanguage((current) => (current === 'en' ? 'el' : 'en'))
@@ -284,6 +308,9 @@ function App() {
             <button className="footer-notice-button" type="button" onClick={() => setNoticeOpen(true)}>
               {page.noticeTitle}
             </button>
+            <button className="footer-notice-button" type="button" onClick={() => setAnalyticsNoticeOpen(true)}>
+              {page.analyticsTitle}
+            </button>
           </div>
         </div>
 
@@ -316,6 +343,24 @@ function App() {
               </button>
             </div>
             {page.noticeParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </section>
+        </div>
+      )}
+
+      {analyticsNoticeOpen && (
+        <div className="notice-overlay" role="presentation" onMouseDown={closeAnalyticsNotice}>
+          <section
+            className="notice-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="analytics-notice-title"
+            onMouseDown={(event) => event.stopPropagation()}
+          >
+            <div className="notice-dialog-header">
+              <h2 id="analytics-notice-title">{page.analyticsTitle}</h2>
+              <button className="notice-close" type="button" aria-label={page.closeAnalytics} title={page.closeAnalytics} onClick={closeAnalyticsNotice}>×</button>
+            </div>
+            <p>{page.analyticsInformation}</p>
           </section>
         </div>
       )}
